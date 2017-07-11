@@ -1,0 +1,6 @@
+<map id="src/player_view.c" name="src/player_view.c">
+<area shape="rect" id="node2" href="$player__view_8h.html" title="Файл, в котором опеределены функции для работы с отображением игрока. " alt="" coords="15,80,129,107"/>
+<area shape="rect" id="node5" href="$rectangle__view_8h.html" title="Файл, в котором опеределены функции для работы с элементом интерфейса: &quot;прямоугольник&quot;. " alt="" coords="153,80,287,107"/>
+<area shape="rect" id="node6" href="$error__report_8h.html" title="Файл, в котором опеределены функции логирования ошибок. " alt="" coords="311,80,422,107"/>
+<area shape="rect" id="node3" href="$player__model_8h.html" title="Файл, в котором опеределены функции для работы с моделью игрока. " alt="" coords="5,155,128,181"/>
+</map>

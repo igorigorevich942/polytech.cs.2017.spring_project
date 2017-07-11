@@ -1,0 +1,6 @@
+<map id="src/game_model.c" name="src/game_model.c">
+<area shape="rect" id="node2" href="$game__model_8h.html" title="Файл, в котором опеределены функции для работы с моделью игры. " alt="" coords="151,80,270,107"/>
+<area shape="rect" id="node6" href="$error__report_8h.html" title="Файл, в котором опеределены функции логирования ошибок. " alt="" coords="294,80,405,107"/>
+<area shape="rect" id="node3" href="$player__model_8h.html" title="Файл, в котором опеределены функции для работы с моделью игрока. " alt="" coords="5,155,128,181"/>
+<area shape="rect" id="node4" href="$timer__model_8h.html" title="Файл, в котором опеределены функции для работы с моделью таймеров. " alt="" coords="152,155,269,181"/>
+</map>

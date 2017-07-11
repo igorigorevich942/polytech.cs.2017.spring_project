@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Race game: Файл src/label_view.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Race game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('label__view_8c.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл label_view.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Файл, в котором реализованы функции для работы с элементом интерфейса: "надпись".  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="label__view_8h_source.html">label_view.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="rectangle__view_8h_source.html">rectangle_view.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="error__report_8h_source.html">error_report.h</a>&quot;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;allegro5/allegro_font.h&gt;</code><br />
+<code>#include &lt;allegro5/allegro_ttf.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для label_view.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="label__view_8c__incl.png" border="0" usemap="#src_2label__view_8c" alt=""/></div>
+<map name="src_2label__view_8c" id="src_2label__view_8c">
+<area shape="rect" id="node2" href="label__view_8h.html" title="Файл, в котором опеределены функции для работы с элементом интерфейса: &quot;надпись&quot;. ..." alt="" coords="5,80,109,107"/>
+<area shape="rect" id="node4" href="rectangle__view_8h.html" title="Файл, в котором опеределены функции для работы с элементом интерфейса: &quot;прямоугольник&quot;. " alt="" coords="133,80,267,107"/>
+<area shape="rect" id="node5" href="error__report_8h.html" title="Файл, в котором опеределены функции логирования ошибок. " alt="" coords="291,80,402,107"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a2c53d2bdf06b28382a374abb3bd92e63"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="label__view_8c.html#a2c53d2bdf06b28382a374abb3bd92e63">LABEL_BORDER_SIZE</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memdesc:a2c53d2bdf06b28382a374abb3bd92e63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размер рамки.  <a href="#a2c53d2bdf06b28382a374abb3bd92e63">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2c53d2bdf06b28382a374abb3bd92e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1610a21b358c3531db64b3208fa70e5b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="label__view_8c.html#a1610a21b358c3531db64b3208fa70e5b">MIN_HEIGHT</a>&#160;&#160;&#160;(<a class="el" href="label__view_8c.html#a2c53d2bdf06b28382a374abb3bd92e63">LABEL_BORDER_SIZE</a> * 2 + 10)</td></tr>
+<tr class="memdesc:a1610a21b358c3531db64b3208fa70e5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Минимальная высота надписи.  <a href="#a1610a21b358c3531db64b3208fa70e5b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1610a21b358c3531db64b3208fa70e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3ee0cc681d736cb6d41c4ebb04c0ae4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="label__view_8c.html#ad3ee0cc681d736cb6d41c4ebb04c0ae4">MIN_WIDTH</a>&#160;&#160;&#160;(<a class="el" href="label__view_8c.html#a2c53d2bdf06b28382a374abb3bd92e63">LABEL_BORDER_SIZE</a> * 2 + 45)</td></tr>
+<tr class="memdesc:ad3ee0cc681d736cb6d41c4ebb04c0ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Минимальная ширина надписи.  <a href="#ad3ee0cc681d736cb6d41c4ebb04c0ae4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad3ee0cc681d736cb6d41c4ebb04c0ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a806c5e8aebd09085d3d46107c7283e71"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="label__view_8c.html#a806c5e8aebd09085d3d46107c7283e71">PATH_FONT</a>&#160;&#160;&#160;&quot;res/VeryConvincing.ttf&quot;</td></tr>
+<tr class="memdesc:a806c5e8aebd09085d3d46107c7283e71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Путь к файлу со шрифтом.  <a href="#a806c5e8aebd09085d3d46107c7283e71">Подробнее...</a><br /></td></tr>
+<tr class="separator:a806c5e8aebd09085d3d46107c7283e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab117546549783a058d0321a287699579"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="label__view_8c.html#ab117546549783a058d0321a287699579">FILE_NAME</a>&#160;&#160;&#160;&quot;label_view.c&quot;</td></tr>
+<tr class="memdesc:ab117546549783a058d0321a287699579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя текущего файла.  <a href="#ab117546549783a058d0321a287699579">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab117546549783a058d0321a287699579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba64ab31ac50908f7aa4125955fcf2ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="label__view_8c.html#aba64ab31ac50908f7aa4125955fcf2ed">FUN_NAME</a>&#160;&#160;&#160;&quot;label_view_init_font&quot;</td></tr>
+<tr class="memdesc:aba64ab31ac50908f7aa4125955fcf2ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя текущей функции.  <a href="#aba64ab31ac50908f7aa4125955fcf2ed">Подробнее...</a><br /></td></tr>
+<tr class="separator:aba64ab31ac50908f7aa4125955fcf2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba64ab31ac50908f7aa4125955fcf2ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="label__view_8c.html#aba64ab31ac50908f7aa4125955fcf2ed">FUN_NAME</a>&#160;&#160;&#160;&quot;label_view_create&quot;</td></tr>
+<tr class="memdesc:aba64ab31ac50908f7aa4125955fcf2ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя текущей функции.  <a href="#aba64ab31ac50908f7aa4125955fcf2ed">Подробнее...</a><br /></td></tr>
+<tr class="separator:aba64ab31ac50908f7aa4125955fcf2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba64ab31ac50908f7aa4125955fcf2ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="label__view_8c.html#aba64ab31ac50908f7aa4125955fcf2ed">FUN_NAME</a>&#160;&#160;&#160;&quot;label_view_draw&quot;</td></tr>
+<tr class="memdesc:aba64ab31ac50908f7aa4125955fcf2ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя текущей функции.  <a href="#aba64ab31ac50908f7aa4125955fcf2ed">Подробнее...</a><br /></td></tr>
+<tr class="separator:aba64ab31ac50908f7aa4125955fcf2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba64ab31ac50908f7aa4125955fcf2ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="label__view_8c.html#aba64ab31ac50908f7aa4125955fcf2ed">FUN_NAME</a>&#160;&#160;&#160;&quot;label_view_set_text&quot;</td></tr>
+<tr class="memdesc:aba64ab31ac50908f7aa4125955fcf2ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя текущей функции.  <a href="#aba64ab31ac50908f7aa4125955fcf2ed">Подробнее...</a><br /></td></tr>
+<tr class="separator:aba64ab31ac50908f7aa4125955fcf2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba64ab31ac50908f7aa4125955fcf2ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="label__view_8c.html#aba64ab31ac50908f7aa4125955fcf2ed">FUN_NAME</a>&#160;&#160;&#160;&quot;label_view_destroy&quot;</td></tr>
+<tr class="memdesc:aba64ab31ac50908f7aa4125955fcf2ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя текущей функции.  <a href="#aba64ab31ac50908f7aa4125955fcf2ed">Подробнее...</a><br /></td></tr>
+<tr class="separator:aba64ab31ac50908f7aa4125955fcf2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:aa0b2902b394029608b3f1cc1bc088f8c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="label__view_8c.html#aa0b2902b394029608b3f1cc1bc088f8c">label_view_init_font</a> ()</td></tr>
+<tr class="separator:aa0b2902b394029608b3f1cc1bc088f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22a1e7fc4834fa2f0b0e572889b36ba7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="label__view_8c.html#a22a1e7fc4834fa2f0b0e572889b36ba7">label_view_destroy_font</a> ()</td></tr>
+<tr class="separator:a22a1e7fc4834fa2f0b0e572889b36ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c2dc97d9adda28c54c27ab98204d82d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlabel__view.html">label_view</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="label__view_8c.html#a9c2dc97d9adda28c54c27ab98204d82d">label_view_create</a> (const char *text, unsigned int width, unsigned int height, ALLEGRO_COLOR color_text, ALLEGRO_COLOR color_background, ALLEGRO_COLOR color_border)</td></tr>
+<tr class="separator:a9c2dc97d9adda28c54c27ab98204d82d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e7cb527cf441612379104d571dcfa03"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="label__view_8c.html#a9e7cb527cf441612379104d571dcfa03">label_view_draw</a> (<a class="el" href="structlabel__view.html">label_view</a> *l_view, unsigned int x, unsigned int y)</td></tr>
+<tr class="separator:a9e7cb527cf441612379104d571dcfa03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2631fe70fdcba7a10ce366577d7c285"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="label__view_8c.html#af2631fe70fdcba7a10ce366577d7c285">label_view_set_text</a> (<a class="el" href="structlabel__view.html">label_view</a> *l_view, const char *text)</td></tr>
+<tr class="separator:af2631fe70fdcba7a10ce366577d7c285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad95c787547beb9badc89438681b0b7f4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="label__view_8c.html#ad95c787547beb9badc89438681b0b7f4">label_view_destroy</a> (<a class="el" href="structlabel__view.html">label_view</a> *l_view)</td></tr>
+<tr class="separator:ad95c787547beb9badc89438681b0b7f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:ae4254615de94af5fc74d43e8b676dcf9"><td class="memItemLeft" align="right" valign="top">ALLEGRO_FONT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="label__view_8c.html#ae4254615de94af5fc74d43e8b676dcf9">font</a> = NULL</td></tr>
+<tr class="memdesc:ae4254615de94af5fc74d43e8b676dcf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Адрес объекта со шрифтом.  <a href="#ae4254615de94af5fc74d43e8b676dcf9">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae4254615de94af5fc74d43e8b676dcf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Файл, в котором реализованы функции для работы с элементом интерфейса: "надпись". </p>
+</div><h2 class="groupheader">Макросы</h2>
+<a id="ab117546549783a058d0321a287699579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab117546549783a058d0321a287699579">&#9670;&nbsp;</a></span>FILE_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FILE_NAME&#160;&#160;&#160;&quot;label_view.c&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Имя текущего файла. </p>
+
+</div>
+</div>
+<a id="aba64ab31ac50908f7aa4125955fcf2ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba64ab31ac50908f7aa4125955fcf2ed">&#9670;&nbsp;</a></span>FUN_NAME <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FUN_NAME&#160;&#160;&#160;&quot;label_view_init_font&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Имя текущей функции. </p>
+
+</div>
+</div>
+<a id="aba64ab31ac50908f7aa4125955fcf2ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba64ab31ac50908f7aa4125955fcf2ed">&#9670;&nbsp;</a></span>FUN_NAME <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FUN_NAME&#160;&#160;&#160;&quot;label_view_create&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Имя текущей функции. </p>
+
+</div>
+</div>
+<a id="aba64ab31ac50908f7aa4125955fcf2ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba64ab31ac50908f7aa4125955fcf2ed">&#9670;&nbsp;</a></span>FUN_NAME <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FUN_NAME&#160;&#160;&#160;&quot;label_view_draw&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Имя текущей функции. </p>
+
+</div>
+</div>
+<a id="aba64ab31ac50908f7aa4125955fcf2ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba64ab31ac50908f7aa4125955fcf2ed">&#9670;&nbsp;</a></span>FUN_NAME <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FUN_NAME&#160;&#160;&#160;&quot;label_view_set_text&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Имя текущей функции. </p>
+
+</div>
+</div>
+<a id="aba64ab31ac50908f7aa4125955fcf2ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba64ab31ac50908f7aa4125955fcf2ed">&#9670;&nbsp;</a></span>FUN_NAME <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FUN_NAME&#160;&#160;&#160;&quot;label_view_destroy&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Имя текущей функции. </p>
+
+</div>
+</div>
+<a id="a2c53d2bdf06b28382a374abb3bd92e63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c53d2bdf06b28382a374abb3bd92e63">&#9670;&nbsp;</a></span>LABEL_BORDER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LABEL_BORDER_SIZE&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Размер рамки. </p>
+
+</div>
+</div>
+<a id="a1610a21b358c3531db64b3208fa70e5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1610a21b358c3531db64b3208fa70e5b">&#9670;&nbsp;</a></span>MIN_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIN_HEIGHT&#160;&#160;&#160;(<a class="el" href="label__view_8c.html#a2c53d2bdf06b28382a374abb3bd92e63">LABEL_BORDER_SIZE</a> * 2 + 10)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Минимальная высота надписи. </p>
+
+</div>
+</div>
+<a id="ad3ee0cc681d736cb6d41c4ebb04c0ae4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3ee0cc681d736cb6d41c4ebb04c0ae4">&#9670;&nbsp;</a></span>MIN_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIN_WIDTH&#160;&#160;&#160;(<a class="el" href="label__view_8c.html#a2c53d2bdf06b28382a374abb3bd92e63">LABEL_BORDER_SIZE</a> * 2 + 45)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Минимальная ширина надписи. </p>
+
+</div>
+</div>
+<a id="a806c5e8aebd09085d3d46107c7283e71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a806c5e8aebd09085d3d46107c7283e71">&#9670;&nbsp;</a></span>PATH_FONT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PATH_FONT&#160;&#160;&#160;&quot;res/VeryConvincing.ttf&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Путь к файлу со шрифтом. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a9c2dc97d9adda28c54c27ab98204d82d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c2dc97d9adda28c54c27ab98204d82d">&#9670;&nbsp;</a></span>label_view_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlabel__view.html">label_view</a>* label_view_create </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_COLOR&#160;</td>
+          <td class="paramname"><em>color_text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_COLOR&#160;</td>
+          <td class="paramname"><em>color_background</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_COLOR&#160;</td>
+          <td class="paramname"><em>color_border</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Создание надписи. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>- текст. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>- ширина. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>- высота. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color_text</td><td>- цвет текста. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color_background</td><td>- цвет фона. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color_border</td><td>- цвет рамки. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Адрес, созданной надписи. <br />
+ NULL, если во время создания надписи произошла ошибка. </dd></dl>
+
+</div>
+</div>
+<a id="ad95c787547beb9badc89438681b0b7f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad95c787547beb9badc89438681b0b7f4">&#9670;&nbsp;</a></span>label_view_destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int label_view_destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlabel__view.html">label_view</a> *&#160;</td>
+          <td class="paramname"><em>l_view</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Удаление надписи. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">l_view</td><td>- адрес надписи, которую нужно удалить. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Ноль, если удаление прошло успешно. <br />
+ Ненулевое число, если во время удаления произошла ошибка. </dd></dl>
+
+</div>
+</div>
+<a id="a22a1e7fc4834fa2f0b0e572889b36ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22a1e7fc4834fa2f0b0e572889b36ba7">&#9670;&nbsp;</a></span>label_view_destroy_font()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int label_view_destroy_font </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Удаление шрифта. </p><dl class="section return"><dt>Возвращает</dt><dd>Ноль, если удаление прошло успешно. <br />
+ Ненулевое число, если во время удаления произошла ошибка.</dd></dl>
+<dl class="section warning"><dt>Предупреждения</dt><dd>Эту функцию обязательно нужно вызвать после удаления всех элементов интерфейса "надпись". </dd></dl>
+
+</div>
+</div>
+<a id="a9e7cb527cf441612379104d571dcfa03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e7cb527cf441612379104d571dcfa03">&#9670;&nbsp;</a></span>label_view_draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int label_view_draw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlabel__view.html">label_view</a> *&#160;</td>
+          <td class="paramname"><em>l_view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Рисование надписи. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">l_view</td><td>- адрес надписи, которую нужно нарисовать. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>- координата рисования верхнего левого угла надписи по оси OX. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>- координата рисования верхнего левого угла надписи по оси OY. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Ноль, если надпись была успешно отрисована. <br />
+ Ненулевое число, если во время рисования произошла ошибка. </dd></dl>
+
+</div>
+</div>
+<a id="aa0b2902b394029608b3f1cc1bc088f8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0b2902b394029608b3f1cc1bc088f8c">&#9670;&nbsp;</a></span>label_view_init_font()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int label_view_init_font </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Инициализация шрифта текстов надписей. </p><dl class="section return"><dt>Возвращает</dt><dd>Ноль, если инифиализация прошла успешно. <br />
+ Ненулевое число, если во время инициализации произошла ошибка.</dd></dl>
+<dl class="section warning"><dt>Предупреждения</dt><dd>Эту функцию обязательно нужно вызвать до создания элементов интерфейса "надпись". </dd></dl>
+
+</div>
+</div>
+<a id="af2631fe70fdcba7a10ce366577d7c285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2631fe70fdcba7a10ce366577d7c285">&#9670;&nbsp;</a></span>label_view_set_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int label_view_set_text </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlabel__view.html">label_view</a> *&#160;</td>
+          <td class="paramname"><em>l_view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Изменение текста надписи. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">l_view</td><td>- адрес надписи, текст которой нужно изменить. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>- новый текст надписи. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Ноль, если текст надписи был успешно изменен. <br />
+ Ненулевое число, если во время изменения текста произошла ошибка. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="ae4254615de94af5fc74d43e8b676dcf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4254615de94af5fc74d43e8b676dcf9">&#9670;&nbsp;</a></span>font</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALLEGRO_FONT* font = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Адрес объекта со шрифтом. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="label__view_8c.html">label_view.c</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

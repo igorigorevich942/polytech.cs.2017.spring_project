@@ -1,0 +1,9 @@
+<map id="src/game_view.h" name="src/game_view.h">
+<area shape="rect" id="node2" href="$game__model_8h.html" title="Файл, в котором опеределены функции для работы с моделью игры. " alt="" coords="477,80,595,107"/>
+<area shape="rect" id="node6" href="$field__view_8h.html" title="Файл, в котором опеределены функции для работы с отображением игрового поля. " alt="" coords="173,80,275,107"/>
+<area shape="rect" id="node10" href="$timer__view_8h.html" title="Файл, в котором опеределены функции для работы с отображением таймеров. " alt="" coords="299,80,405,107"/>
+<area shape="rect" id="node3" href="$player__model_8h.html" title="Файл, в котором опеределены функции для работы с моделью игрока. " alt="" coords="183,229,305,256"/>
+<area shape="rect" id="node4" href="$timer__model_8h.html" title="Файл, в котором опеределены функции для работы с моделью таймеров. " alt="" coords="409,155,527,181"/>
+<area shape="rect" id="node7" href="$player__view_8h.html" title="Файл, в котором опеределены функции для работы с отображением игрока. " alt="" coords="93,155,206,181"/>
+<area shape="rect" id="node9" href="$label__view_8h.html" title="Файл, в котором опеределены функции для работы с элементом интерфейса: &quot;надпись&quot;. ..." alt="" coords="281,155,385,181"/>
+</map>
