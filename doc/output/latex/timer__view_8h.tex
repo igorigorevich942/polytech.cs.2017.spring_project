@@ -1,0 +1,188 @@
+\hypertarget{timer__view_8h}{}\section{Файл src/timer\+\_\+view.h}
+\label{timer__view_8h}\index{src/timer\+\_\+view.\+h@{src/timer\+\_\+view.\+h}}
+
+
+Файл, в котором опеределены функции для работы с отображением таймеров.  
+
+
+{\ttfamily \#include \char`\"{}timer\+\_\+model.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}label\+\_\+view.\+h\char`\"{}}\newline
+Граф включаемых заголовочных файлов для timer\+\_\+view.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{timer__view_8h__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{timer__view_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtimer__view}{timer\+\_\+view}
+\begin{DoxyCompactList}\small\item\em Структура, которая описывает отображение таймеров. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{timer__view_8h_aeb2e3603974f8cfe281b154e8e18a81b}{T\+I\+M\+E\+R\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+C\+O\+L\+OR}~al\+\_\+map\+\_\+rgb(255, 255, 255)
+\begin{DoxyCompactList}\small\item\em Цвет фона. \end{DoxyCompactList}\item 
+\#define \hyperlink{timer__view_8h_a623c5765ad86a844b59daf12208dc0fe}{T\+I\+M\+E\+R\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+L\+OR}~al\+\_\+map\+\_\+rgb(0, 0, 0)
+\begin{DoxyCompactList}\small\item\em Цвет рамки. \end{DoxyCompactList}\item 
+\#define \hyperlink{timer__view_8h_aa07a94b74fe29f66f358728e75c92120}{T\+I\+M\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+C\+O\+L\+OR}~al\+\_\+map\+\_\+rgb(255, 99, 71)
+\begin{DoxyCompactList}\small\item\em Цвет текста. \end{DoxyCompactList}\item 
+\#define \hyperlink{timer__view_8h_a5d8bc42022f09d9f6183d24625eca939}{T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H\+\_\+\+L\+T\+OP}~300
+\begin{DoxyCompactList}\small\item\em Ширина таймера с рекордным времен. \end{DoxyCompactList}\item 
+\#define \hyperlink{timer__view_8h_a1f0100f03a0debe0e6eb51f11ba0e54f}{T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H\+\_\+\+L\+C\+U\+R\+R\+E\+NT}~200
+\begin{DoxyCompactList}\small\item\em Ширина таймера с текущим времен. \end{DoxyCompactList}\item 
+\#define \hyperlink{timer__view_8h_a6a0b0dd18b72fdb8ef9f7e438c057261}{T\+I\+M\+E\+R\+\_\+\+H\+E\+I\+G\+HT}~70
+\begin{DoxyCompactList}\small\item\em Высота таймеров. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structtimer__view}{timer\+\_\+view} \hyperlink{timer__view_8h_a834d6df554a53914ac021168c8e1e01d}{timer\+\_\+view}
+\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structtimer__view}{timer\+\_\+view} $\ast$ \hyperlink{timer__view_8h_ab60c31593d649a049480639234e40c3b}{timer\+\_\+view\+\_\+create} (\hyperlink{structtimer__model}{timer\+\_\+model} $\ast$t\+\_\+model, unsigned int width, unsigned int height, int shift\+\_\+x)
+\item 
+int \hyperlink{timer__view_8h_aa4c3cd871027bad94318899af57eca41}{timer\+\_\+view\+\_\+draw} (\hyperlink{structtimer__view}{timer\+\_\+view} $\ast$t\+\_\+view)
+\item 
+int \hyperlink{timer__view_8h_ae2233bb32211b932e7e3608ed0079407}{timer\+\_\+view\+\_\+destroy} (\hyperlink{structtimer__view}{timer\+\_\+view} $\ast$t\+\_\+view)
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Файл, в котором опеределены функции для работы с отображением таймеров. 
+
+
+
+\subsection{Макросы}
+\mbox{\Hypertarget{timer__view_8h_aeb2e3603974f8cfe281b154e8e18a81b}\label{timer__view_8h_aeb2e3603974f8cfe281b154e8e18a81b}} 
+\index{timer\+\_\+view.\+h@{timer\+\_\+view.\+h}!T\+I\+M\+E\+R\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+C\+O\+L\+OR@{T\+I\+M\+E\+R\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+C\+O\+L\+OR}}
+\index{T\+I\+M\+E\+R\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+C\+O\+L\+OR@{T\+I\+M\+E\+R\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+C\+O\+L\+OR}!timer\+\_\+view.\+h@{timer\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+R\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+C\+O\+L\+OR}{TIMER\_BACKGROUND\_COLOR}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+R\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+C\+O\+L\+OR~al\+\_\+map\+\_\+rgb(255, 255, 255)}
+
+
+
+Цвет фона. 
+
+\mbox{\Hypertarget{timer__view_8h_a623c5765ad86a844b59daf12208dc0fe}\label{timer__view_8h_a623c5765ad86a844b59daf12208dc0fe}} 
+\index{timer\+\_\+view.\+h@{timer\+\_\+view.\+h}!T\+I\+M\+E\+R\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+L\+OR@{T\+I\+M\+E\+R\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+L\+OR}}
+\index{T\+I\+M\+E\+R\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+L\+OR@{T\+I\+M\+E\+R\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+L\+OR}!timer\+\_\+view.\+h@{timer\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+R\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+L\+OR}{TIMER\_BORDER\_COLOR}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+R\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+L\+OR~al\+\_\+map\+\_\+rgb(0, 0, 0)}
+
+
+
+Цвет рамки. 
+
+\mbox{\Hypertarget{timer__view_8h_a6a0b0dd18b72fdb8ef9f7e438c057261}\label{timer__view_8h_a6a0b0dd18b72fdb8ef9f7e438c057261}} 
+\index{timer\+\_\+view.\+h@{timer\+\_\+view.\+h}!T\+I\+M\+E\+R\+\_\+\+H\+E\+I\+G\+HT@{T\+I\+M\+E\+R\+\_\+\+H\+E\+I\+G\+HT}}
+\index{T\+I\+M\+E\+R\+\_\+\+H\+E\+I\+G\+HT@{T\+I\+M\+E\+R\+\_\+\+H\+E\+I\+G\+HT}!timer\+\_\+view.\+h@{timer\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+R\+\_\+\+H\+E\+I\+G\+HT}{TIMER\_HEIGHT}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+R\+\_\+\+H\+E\+I\+G\+HT~70}
+
+
+
+Высота таймеров. 
+
+\mbox{\Hypertarget{timer__view_8h_aa07a94b74fe29f66f358728e75c92120}\label{timer__view_8h_aa07a94b74fe29f66f358728e75c92120}} 
+\index{timer\+\_\+view.\+h@{timer\+\_\+view.\+h}!T\+I\+M\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+C\+O\+L\+OR@{T\+I\+M\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+C\+O\+L\+OR}}
+\index{T\+I\+M\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+C\+O\+L\+OR@{T\+I\+M\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+C\+O\+L\+OR}!timer\+\_\+view.\+h@{timer\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+C\+O\+L\+OR}{TIMER\_TEXT\_COLOR}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+C\+O\+L\+OR~al\+\_\+map\+\_\+rgb(255, 99, 71)}
+
+
+
+Цвет текста. 
+
+\mbox{\Hypertarget{timer__view_8h_a1f0100f03a0debe0e6eb51f11ba0e54f}\label{timer__view_8h_a1f0100f03a0debe0e6eb51f11ba0e54f}} 
+\index{timer\+\_\+view.\+h@{timer\+\_\+view.\+h}!T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H\+\_\+\+L\+C\+U\+R\+R\+E\+NT@{T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H\+\_\+\+L\+C\+U\+R\+R\+E\+NT}}
+\index{T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H\+\_\+\+L\+C\+U\+R\+R\+E\+NT@{T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H\+\_\+\+L\+C\+U\+R\+R\+E\+NT}!timer\+\_\+view.\+h@{timer\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H\+\_\+\+L\+C\+U\+R\+R\+E\+NT}{TIMER\_WIDTH\_LCURRENT}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H\+\_\+\+L\+C\+U\+R\+R\+E\+NT~200}
+
+
+
+Ширина таймера с текущим времен. 
+
+\mbox{\Hypertarget{timer__view_8h_a5d8bc42022f09d9f6183d24625eca939}\label{timer__view_8h_a5d8bc42022f09d9f6183d24625eca939}} 
+\index{timer\+\_\+view.\+h@{timer\+\_\+view.\+h}!T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H\+\_\+\+L\+T\+OP@{T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H\+\_\+\+L\+T\+OP}}
+\index{T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H\+\_\+\+L\+T\+OP@{T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H\+\_\+\+L\+T\+OP}!timer\+\_\+view.\+h@{timer\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H\+\_\+\+L\+T\+OP}{TIMER\_WIDTH\_LTOP}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+R\+\_\+\+W\+I\+D\+T\+H\+\_\+\+L\+T\+OP~300}
+
+
+
+Ширина таймера с рекордным времен. 
+
+
+
+\subsection{Типы}
+\mbox{\Hypertarget{timer__view_8h_a834d6df554a53914ac021168c8e1e01d}\label{timer__view_8h_a834d6df554a53914ac021168c8e1e01d}} 
+\index{timer\+\_\+view.\+h@{timer\+\_\+view.\+h}!timer\+\_\+view@{timer\+\_\+view}}
+\index{timer\+\_\+view@{timer\+\_\+view}!timer\+\_\+view.\+h@{timer\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{timer\+\_\+view}{timer\_view}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structtimer__view}{timer\+\_\+view} \hyperlink{structtimer__view}{timer\+\_\+view}}
+
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{timer__view_8h_ab60c31593d649a049480639234e40c3b}\label{timer__view_8h_ab60c31593d649a049480639234e40c3b}} 
+\index{timer\+\_\+view.\+h@{timer\+\_\+view.\+h}!timer\+\_\+view\+\_\+create@{timer\+\_\+view\+\_\+create}}
+\index{timer\+\_\+view\+\_\+create@{timer\+\_\+view\+\_\+create}!timer\+\_\+view.\+h@{timer\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{timer\+\_\+view\+\_\+create()}{timer\_view\_create()}}
+{\footnotesize\ttfamily \hyperlink{structtimer__view}{timer\+\_\+view}$\ast$ timer\+\_\+view\+\_\+create (\begin{DoxyParamCaption}\item[{\hyperlink{structtimer__model}{timer\+\_\+model} $\ast$}]{t\+\_\+model,  }\item[{unsigned int}]{width,  }\item[{unsigned int}]{height,  }\item[{int}]{shift\+\_\+x }\end{DoxyParamCaption})}
+
+Создание отображения таймеров. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em t\+\_\+model} & -\/ адрес модели таймеров. \\
+\hline
+\mbox{\tt in}  & {\em width} & -\/ ширина области рисования. \\
+\hline
+\mbox{\tt in}  & {\em height} & -\/ высота области рисования. \\
+\hline
+\mbox{\tt in}  & {\em shift\+\_\+x} & -\/ смещение позиций рисования таймеров по оси OX. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Адрес, созданного отображения таймеров. ~\newline
+ N\+U\+LL, если во время создания отображения таймеров произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{timer__view_8h_ae2233bb32211b932e7e3608ed0079407}\label{timer__view_8h_ae2233bb32211b932e7e3608ed0079407}} 
+\index{timer\+\_\+view.\+h@{timer\+\_\+view.\+h}!timer\+\_\+view\+\_\+destroy@{timer\+\_\+view\+\_\+destroy}}
+\index{timer\+\_\+view\+\_\+destroy@{timer\+\_\+view\+\_\+destroy}!timer\+\_\+view.\+h@{timer\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{timer\+\_\+view\+\_\+destroy()}{timer\_view\_destroy()}}
+{\footnotesize\ttfamily int timer\+\_\+view\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{structtimer__view}{timer\+\_\+view} $\ast$}]{t\+\_\+view }\end{DoxyParamCaption})}
+
+Удаление отображения таймеров. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em t\+\_\+view} & -\/ адрес отображения таймеров, которое нужно удалить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если удаление прошло успешно. ~\newline
+ Ненулевое число, если во время удаления произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{timer__view_8h_aa4c3cd871027bad94318899af57eca41}\label{timer__view_8h_aa4c3cd871027bad94318899af57eca41}} 
+\index{timer\+\_\+view.\+h@{timer\+\_\+view.\+h}!timer\+\_\+view\+\_\+draw@{timer\+\_\+view\+\_\+draw}}
+\index{timer\+\_\+view\+\_\+draw@{timer\+\_\+view\+\_\+draw}!timer\+\_\+view.\+h@{timer\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{timer\+\_\+view\+\_\+draw()}{timer\_view\_draw()}}
+{\footnotesize\ttfamily int timer\+\_\+view\+\_\+draw (\begin{DoxyParamCaption}\item[{\hyperlink{structtimer__view}{timer\+\_\+view} $\ast$}]{t\+\_\+view }\end{DoxyParamCaption})}
+
+Рисование отображения таймеров. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em t\+\_\+view} & -\/ адрес отображения таймеров, которое нужно нарисовать. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если отображение было успешно отрисовано. ~\newline
+ Ненулевое число, если во время рисования произошла ошибка. 
+\end{DoxyReturn}

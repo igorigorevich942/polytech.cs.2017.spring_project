@@ -1,0 +1,9 @@
+<map id="game_view" name="game_view">
+<area shape="rect" id="node2" href="$structtimer__view.html" title="Структура, которая описывает отображение таймеров. " alt="" coords="177,199,272,225"/>
+<area shape="rect" id="node3" href="$structtimer__model.html" title="Структура, которая описывает модель таймеров. " alt="" coords="125,95,231,121"/>
+<area shape="rect" id="node5" href="$structgame__model.html" title="Структура, которая описывает модель игры. " alt="" coords="33,199,139,225"/>
+<area shape="rect" id="node4" href="$structlabel__view.html" title="Структура, которая описывает элемент интерфейса: &quot;надпись&quot;. " alt="" coords="260,95,352,121"/>
+<area shape="rect" id="node7" href="$structfield__view.html" title="Структура, которая описывает отображение игрового поля. " alt="" coords="309,199,399,225"/>
+<area shape="rect" id="node6" href="$structplayer__model.html" title="Структура, которая описывает модель игрока. " alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node8" href="$structplayer__view.html" title="Структура, которая описывает отображение игрока. " alt="" coords="379,95,481,121"/>
+</map>

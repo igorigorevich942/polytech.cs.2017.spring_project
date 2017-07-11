@@ -1,0 +1,210 @@
+\hypertarget{game__model_8c}{}\section{Файл src/game\+\_\+model.c}
+\label{game__model_8c}\index{src/game\+\_\+model.\+c@{src/game\+\_\+model.\+c}}
+{\ttfamily \#include \char`\"{}game\+\_\+model.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}error\+\_\+report.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Граф включаемых заголовочных файлов для game\+\_\+model.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__model_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{game__model_8c_ab117546549783a058d0321a287699579}{F\+I\+L\+E\+\_\+\+N\+A\+ME}~\char`\"{}game\+\_\+model.\+c\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущего файла. \end{DoxyCompactList}\item 
+\#define \hyperlink{game__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}game\+\_\+model\+\_\+create\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\item 
+\#define \hyperlink{game__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}game\+\_\+model\+\_\+key\+\_\+down\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\item 
+\#define \hyperlink{game__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}game\+\_\+model\+\_\+update\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\item 
+\#define \hyperlink{game__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}game\+\_\+model\+\_\+start\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\item 
+\#define \hyperlink{game__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}game\+\_\+model\+\_\+is\+\_\+end\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\item 
+\#define \hyperlink{game__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}game\+\_\+model\+\_\+destroy\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structgame__model}{game\+\_\+model} $\ast$ \hyperlink{game__model_8c_aaad3a76b7ba25cb7490c5830baa7432a}{game\+\_\+model\+\_\+create} ()
+\item 
+int \hyperlink{game__model_8c_a79ebd68f67408541b9783c84c3bbc0cd}{game\+\_\+model\+\_\+key\+\_\+down} (\hyperlink{structgame__model}{game\+\_\+model} $\ast$g\+\_\+model, \hyperlink{game__model_8h_ab56b05c2bb34d1168dc2576c83a1e287}{key\+\_\+type} k\+\_\+type)
+\item 
+int \hyperlink{game__model_8c_a7b376d7df735e44499029175f25d7dc2}{game\+\_\+model\+\_\+update} (\hyperlink{structgame__model}{game\+\_\+model} $\ast$g\+\_\+model)
+\item 
+int \hyperlink{game__model_8c_a664d5848306405c334826f6dd5a6de21}{game\+\_\+model\+\_\+start} (\hyperlink{structgame__model}{game\+\_\+model} $\ast$g\+\_\+model)
+\item 
+int \hyperlink{game__model_8c_a9b1e18809a52c5132f77e53fdae2edd6}{game\+\_\+model\+\_\+is\+\_\+end} (\hyperlink{structgame__model}{game\+\_\+model} $\ast$g\+\_\+model)
+\item 
+int \hyperlink{game__model_8c_ac392382451e375796a63240a776c270f}{game\+\_\+model\+\_\+destroy} (\hyperlink{structgame__model}{game\+\_\+model} $\ast$g\+\_\+model)
+\end{DoxyCompactItemize}
+
+
+\subsection{Макросы}
+\mbox{\Hypertarget{game__model_8c_ab117546549783a058d0321a287699579}\label{game__model_8c_ab117546549783a058d0321a287699579}} 
+\index{game\+\_\+model.\+c@{game\+\_\+model.\+c}!F\+I\+L\+E\+\_\+\+N\+A\+ME@{F\+I\+L\+E\+\_\+\+N\+A\+ME}}
+\index{F\+I\+L\+E\+\_\+\+N\+A\+ME@{F\+I\+L\+E\+\_\+\+N\+A\+ME}!game\+\_\+model.\+c@{game\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+I\+L\+E\+\_\+\+N\+A\+ME}{FILE\_NAME}}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+N\+A\+ME~\char`\"{}game\+\_\+model.\+c\char`\"{}}
+
+
+
+Имя текущего файла. 
+
+\mbox{\Hypertarget{game__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{game__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{game\+\_\+model.\+c@{game\+\_\+model.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!game\+\_\+model.\+c@{game\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}game\+\_\+model\+\_\+create\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{game__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{game__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{game\+\_\+model.\+c@{game\+\_\+model.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!game\+\_\+model.\+c@{game\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}game\+\_\+model\+\_\+key\+\_\+down\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{game__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{game__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{game\+\_\+model.\+c@{game\+\_\+model.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!game\+\_\+model.\+c@{game\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}game\+\_\+model\+\_\+update\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{game__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{game__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{game\+\_\+model.\+c@{game\+\_\+model.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!game\+\_\+model.\+c@{game\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}game\+\_\+model\+\_\+start\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{game__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{game__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{game\+\_\+model.\+c@{game\+\_\+model.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!game\+\_\+model.\+c@{game\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}game\+\_\+model\+\_\+is\+\_\+end\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{game__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{game__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{game\+\_\+model.\+c@{game\+\_\+model.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!game\+\_\+model.\+c@{game\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}game\+\_\+model\+\_\+destroy\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{game__model_8c_aaad3a76b7ba25cb7490c5830baa7432a}\label{game__model_8c_aaad3a76b7ba25cb7490c5830baa7432a}} 
+\index{game\+\_\+model.\+c@{game\+\_\+model.\+c}!game\+\_\+model\+\_\+create@{game\+\_\+model\+\_\+create}}
+\index{game\+\_\+model\+\_\+create@{game\+\_\+model\+\_\+create}!game\+\_\+model.\+c@{game\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+model\+\_\+create()}{game\_model\_create()}}
+{\footnotesize\ttfamily \hyperlink{structgame__model}{game\+\_\+model}$\ast$ game\+\_\+model\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Создание модели игры. \begin{DoxyReturn}{Возвращает}
+Адрес, созданной модели. ~\newline
+ N\+U\+LL, если во время создания модели произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__model_8c_ac392382451e375796a63240a776c270f}\label{game__model_8c_ac392382451e375796a63240a776c270f}} 
+\index{game\+\_\+model.\+c@{game\+\_\+model.\+c}!game\+\_\+model\+\_\+destroy@{game\+\_\+model\+\_\+destroy}}
+\index{game\+\_\+model\+\_\+destroy@{game\+\_\+model\+\_\+destroy}!game\+\_\+model.\+c@{game\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+model\+\_\+destroy()}{game\_model\_destroy()}}
+{\footnotesize\ttfamily int game\+\_\+model\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{structgame__model}{game\+\_\+model} $\ast$}]{g\+\_\+model }\end{DoxyParamCaption})}
+
+Удаление модели игры. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em g\+\_\+model} & -\/ адрес модели игры, которую нужно удалить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если удаление прошло успешно. ~\newline
+ Ненулевое число, если во время удаления произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__model_8c_a9b1e18809a52c5132f77e53fdae2edd6}\label{game__model_8c_a9b1e18809a52c5132f77e53fdae2edd6}} 
+\index{game\+\_\+model.\+c@{game\+\_\+model.\+c}!game\+\_\+model\+\_\+is\+\_\+end@{game\+\_\+model\+\_\+is\+\_\+end}}
+\index{game\+\_\+model\+\_\+is\+\_\+end@{game\+\_\+model\+\_\+is\+\_\+end}!game\+\_\+model.\+c@{game\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+model\+\_\+is\+\_\+end()}{game\_model\_is\_end()}}
+{\footnotesize\ttfamily int game\+\_\+model\+\_\+is\+\_\+end (\begin{DoxyParamCaption}\item[{\hyperlink{structgame__model}{game\+\_\+model} $\ast$}]{g\+\_\+model }\end{DoxyParamCaption})}
+
+Проверка окончания игры. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em g\+\_\+model} & -\/ адрес модели игры, которую нужно проверить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Отрицательное число, если во время проверки произошла ошибка. ~\newline
+ Ноль, если игра еще не закончилась. ~\newline
+ Положительное число, если игра закончилась. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__model_8c_a79ebd68f67408541b9783c84c3bbc0cd}\label{game__model_8c_a79ebd68f67408541b9783c84c3bbc0cd}} 
+\index{game\+\_\+model.\+c@{game\+\_\+model.\+c}!game\+\_\+model\+\_\+key\+\_\+down@{game\+\_\+model\+\_\+key\+\_\+down}}
+\index{game\+\_\+model\+\_\+key\+\_\+down@{game\+\_\+model\+\_\+key\+\_\+down}!game\+\_\+model.\+c@{game\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+model\+\_\+key\+\_\+down()}{game\_model\_key\_down()}}
+{\footnotesize\ttfamily int game\+\_\+model\+\_\+key\+\_\+down (\begin{DoxyParamCaption}\item[{\hyperlink{structgame__model}{game\+\_\+model} $\ast$}]{g\+\_\+model,  }\item[{\hyperlink{game__model_8h_ab56b05c2bb34d1168dc2576c83a1e287}{key\+\_\+type}}]{k\+\_\+type }\end{DoxyParamCaption})}
+
+Обработка нажатия клавиши. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in,out}  & {\em g\+\_\+model} & -\/ адрес модели, для которой обрабатывает нажатие. \\
+\hline
+\mbox{\tt in}  & {\em k\+\_\+type} & -\/ тип нажатой клавиши. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если обработка прошла успешно. ~\newline
+ Ненулевое число, если во время обработки произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__model_8c_a664d5848306405c334826f6dd5a6de21}\label{game__model_8c_a664d5848306405c334826f6dd5a6de21}} 
+\index{game\+\_\+model.\+c@{game\+\_\+model.\+c}!game\+\_\+model\+\_\+start@{game\+\_\+model\+\_\+start}}
+\index{game\+\_\+model\+\_\+start@{game\+\_\+model\+\_\+start}!game\+\_\+model.\+c@{game\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+model\+\_\+start()}{game\_model\_start()}}
+{\footnotesize\ttfamily int game\+\_\+model\+\_\+start (\begin{DoxyParamCaption}\item[{\hyperlink{structgame__model}{game\+\_\+model} $\ast$}]{g\+\_\+model }\end{DoxyParamCaption})}
+
+Старт игры. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in,out}  & {\em g\+\_\+model} & -\/ адрес модели игры, которую нужно запустить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если запуск прошёл успешно. ~\newline
+ Ненулевое число, если во время запуска произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__model_8c_a7b376d7df735e44499029175f25d7dc2}\label{game__model_8c_a7b376d7df735e44499029175f25d7dc2}} 
+\index{game\+\_\+model.\+c@{game\+\_\+model.\+c}!game\+\_\+model\+\_\+update@{game\+\_\+model\+\_\+update}}
+\index{game\+\_\+model\+\_\+update@{game\+\_\+model\+\_\+update}!game\+\_\+model.\+c@{game\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+model\+\_\+update()}{game\_model\_update()}}
+{\footnotesize\ttfamily int game\+\_\+model\+\_\+update (\begin{DoxyParamCaption}\item[{\hyperlink{structgame__model}{game\+\_\+model} $\ast$}]{g\+\_\+model }\end{DoxyParamCaption})}
+
+Обновление данных модели игры 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in,out}  & {\em g\+\_\+model} & -\/ адрес модели игры, которую необходимо обновить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если обновление прошло успешно. ~\newline
+ Ненулевое число, если во время обновления произошла ошибка. 
+\end{DoxyReturn}

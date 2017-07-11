@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Race game: Файл src/game_view.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Race game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('game__view_8h.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Структуры данных</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл game_view.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Файл, в котором опеределены функции для работы с отображением игры.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="game__model_8h_source.html">game_model.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="field__view_8h_source.html">field_view.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="timer__view_8h_source.html">timer_view.h</a>&quot;</code><br />
+<code>#include &lt;allegro5/allegro.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для game_view.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="game__view_8h__incl.png" border="0" usemap="#src_2game__view_8h" alt=""/></div>
+<map name="src_2game__view_8h" id="src_2game__view_8h">
+<area shape="rect" id="node2" href="game__model_8h.html" title="Файл, в котором опеределены функции для работы с моделью игры. " alt="" coords="477,80,595,107"/>
+<area shape="rect" id="node6" href="field__view_8h.html" title="Файл, в котором опеределены функции для работы с отображением игрового поля. " alt="" coords="173,80,275,107"/>
+<area shape="rect" id="node10" href="timer__view_8h.html" title="Файл, в котором опеределены функции для работы с отображением таймеров. " alt="" coords="299,80,405,107"/>
+<area shape="rect" id="node3" href="player__model_8h.html" title="Файл, в котором опеределены функции для работы с моделью игрока. " alt="" coords="183,229,305,256"/>
+<area shape="rect" id="node4" href="timer__model_8h.html" title="Файл, в котором опеределены функции для работы с моделью таймеров. " alt="" coords="409,155,527,181"/>
+<area shape="rect" id="node7" href="player__view_8h.html" title="Файл, в котором опеределены функции для работы с отображением игрока. " alt="" coords="93,155,206,181"/>
+<area shape="rect" id="node9" href="label__view_8h.html" title="Файл, в котором опеределены функции для работы с элементом интерфейса: &quot;надпись&quot;. ..." alt="" coords="281,155,385,181"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="game__view_8h__dep__incl.png" border="0" usemap="#src_2game__view_8hdep" alt=""/></div>
+<map name="src_2game__view_8hdep" id="src_2game__view_8hdep">
+<area shape="rect" id="node2" href="game__view_8c.html" title="Файл, в котором опеределены функции для работы с отображением игры. " alt="" coords="5,80,136,107"/>
+<area shape="rect" id="node3" href="main_8c.html" title="Файл, в котором создается и запускается игра. " alt="" coords="161,80,250,107"/>
+</map>
+</div>
+</div>
+<p><a href="game__view_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Структуры данных</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgame__view.html">game_view</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Структура, которая описывает отображение игры.  <a href="structgame__view.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:ac92ca5ab87034a348decad7ee8d4bd1b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__view_8h.html#ac92ca5ab87034a348decad7ee8d4bd1b">FPS</a>&#160;&#160;&#160;60</td></tr>
+<tr class="memdesc:ac92ca5ab87034a348decad7ee8d4bd1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Частота обновления кадров в секунду.  <a href="#ac92ca5ab87034a348decad7ee8d4bd1b">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac92ca5ab87034a348decad7ee8d4bd1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cd109632a6dcccaa80b43561b1ab700"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__view_8h.html#a2cd109632a6dcccaa80b43561b1ab700">SCREEN_WIDTH</a>&#160;&#160;&#160;800</td></tr>
+<tr class="memdesc:a2cd109632a6dcccaa80b43561b1ab700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ширина экрана.  <a href="#a2cd109632a6dcccaa80b43561b1ab700">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2cd109632a6dcccaa80b43561b1ab700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6974d08a74da681b3957b2fead2608b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__view_8h.html#a6974d08a74da681b3957b2fead2608b8">SCREEN_HEIGHT</a>&#160;&#160;&#160;600</td></tr>
+<tr class="memdesc:a6974d08a74da681b3957b2fead2608b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Высота экрана.  <a href="#a6974d08a74da681b3957b2fead2608b8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6974d08a74da681b3957b2fead2608b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c621d1e6010992bc7f6f9f0472495cc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__view_8h.html#a1c621d1e6010992bc7f6f9f0472495cc">GAME_V_BACKGROUND</a>&#160;&#160;&#160;al_map_rgb(255, 255, 255)</td></tr>
+<tr class="memdesc:a1c621d1e6010992bc7f6f9f0472495cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Цвет фона.  <a href="#a1c621d1e6010992bc7f6f9f0472495cc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1c621d1e6010992bc7f6f9f0472495cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a65989b0931b52a73cb13d10fd2ae77dd"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structgame__view.html">game_view</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__view_8h.html#a65989b0931b52a73cb13d10fd2ae77dd">game_view</a></td></tr>
+<tr class="separator:a65989b0931b52a73cb13d10fd2ae77dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a5d31da96dc1fcded5af87b110ea1cd98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgame__view.html">game_view</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__view_8h.html#a5d31da96dc1fcded5af87b110ea1cd98">game_view_create</a> ()</td></tr>
+<tr class="separator:a5d31da96dc1fcded5af87b110ea1cd98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58c54dcc496dca3fe69803f83b89a877"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__view_8h.html#a58c54dcc496dca3fe69803f83b89a877">game_view_start</a> (<a class="el" href="structgame__view.html">game_view</a> *g_view)</td></tr>
+<tr class="separator:a58c54dcc496dca3fe69803f83b89a877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc345bb97069dd789b670fe8f1f23a4d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__view_8h.html#abc345bb97069dd789b670fe8f1f23a4d">game_view_destroy</a> (<a class="el" href="structgame__view.html">game_view</a> *g_view)</td></tr>
+<tr class="separator:abc345bb97069dd789b670fe8f1f23a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Файл, в котором опеределены функции для работы с отображением игры. </p>
+</div><h2 class="groupheader">Макросы</h2>
+<a id="ac92ca5ab87034a348decad7ee8d4bd1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac92ca5ab87034a348decad7ee8d4bd1b">&#9670;&nbsp;</a></span>FPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FPS&#160;&#160;&#160;60</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Частота обновления кадров в секунду. </p>
+
+</div>
+</div>
+<a id="a1c621d1e6010992bc7f6f9f0472495cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c621d1e6010992bc7f6f9f0472495cc">&#9670;&nbsp;</a></span>GAME_V_BACKGROUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GAME_V_BACKGROUND&#160;&#160;&#160;al_map_rgb(255, 255, 255)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Цвет фона. </p>
+
+</div>
+</div>
+<a id="a6974d08a74da681b3957b2fead2608b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6974d08a74da681b3957b2fead2608b8">&#9670;&nbsp;</a></span>SCREEN_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCREEN_HEIGHT&#160;&#160;&#160;600</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Высота экрана. </p>
+
+</div>
+</div>
+<a id="a2cd109632a6dcccaa80b43561b1ab700"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cd109632a6dcccaa80b43561b1ab700">&#9670;&nbsp;</a></span>SCREEN_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCREEN_WIDTH&#160;&#160;&#160;800</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ширина экрана. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Типы</h2>
+<a id="a65989b0931b52a73cb13d10fd2ae77dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65989b0931b52a73cb13d10fd2ae77dd">&#9670;&nbsp;</a></span>game_view</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structgame__view.html">game_view</a> <a class="el" href="structgame__view.html">game_view</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a5d31da96dc1fcded5af87b110ea1cd98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d31da96dc1fcded5af87b110ea1cd98">&#9670;&nbsp;</a></span>game_view_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgame__view.html">game_view</a>* game_view_create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Создание отображения игры. </p><dl class="section return"><dt>Возвращает</dt><dd>Адрес, созданного отображения игры. <br />
+ NULL, если во время создания отображения игры произошла ошибка. </dd></dl>
+
+</div>
+</div>
+<a id="abc345bb97069dd789b670fe8f1f23a4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc345bb97069dd789b670fe8f1f23a4d">&#9670;&nbsp;</a></span>game_view_destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int game_view_destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame__view.html">game_view</a> *&#160;</td>
+          <td class="paramname"><em>g_view</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Удаление отображения игры. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">g_view</td><td>- адрес отображения игры, которое нужно удалить. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Ноль, если удаление прошло успешно. <br />
+ Ненулевое число, если во время удаления произошла ошибка. </dd></dl>
+
+</div>
+</div>
+<a id="a58c54dcc496dca3fe69803f83b89a877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58c54dcc496dca3fe69803f83b89a877">&#9670;&nbsp;</a></span>game_view_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int game_view_start </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgame__view.html">game_view</a> *&#160;</td>
+          <td class="paramname"><em>g_view</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Старт игры. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">g_view</td><td>- адрес отображения игры, которую нужно начать. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Ноль, если игра успешно закончилась. <br />
+ Ненулево число, если игра было преджевременно прекращена. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="game__view_8h.html">game_view.h</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

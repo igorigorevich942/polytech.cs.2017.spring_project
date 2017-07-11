@@ -1,0 +1,8 @@
+<map id="src/player_view.h" name="src/player_view.h">
+<area shape="rect" id="node2" href="$field__view_8h.html" title="Файл, в котором опеределены функции для работы с отображением игрового поля. " alt="" coords="81,80,205,107"/>
+<area shape="rect" id="node7" href="$player__view_8c.html" title="src/player_view.c" alt="" coords="229,80,363,107"/>
+<area shape="rect" id="node3" href="$field__view_8c.html" title="Файл, в котором реализованы функции для работы с отображением игрового поля. " alt="" coords="5,155,128,181"/>
+<area shape="rect" id="node4" href="$game__view_8h.html" title="Файл, в котором опеределены функции для работы с отображением игры. " alt="" coords="153,155,285,181"/>
+<area shape="rect" id="node5" href="$game__view_8c.html" title="Файл, в котором опеределены функции для работы с отображением игры. " alt="" coords="85,229,216,256"/>
+<area shape="rect" id="node6" href="$main_8c.html" title="Файл, в котором создается и запускается игра. " alt="" coords="241,229,330,256"/>
+</map>

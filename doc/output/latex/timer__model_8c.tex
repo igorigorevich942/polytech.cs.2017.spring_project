@@ -1,0 +1,234 @@
+\hypertarget{timer__model_8c}{}\section{Файл src/timer\+\_\+model.c}
+\label{timer__model_8c}\index{src/timer\+\_\+model.\+c@{src/timer\+\_\+model.\+c}}
+{\ttfamily \#include \char`\"{}timer\+\_\+model.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}error\+\_\+report.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Граф включаемых заголовочных файлов для timer\+\_\+model.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer__model_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{timer__model_8c_ab117546549783a058d0321a287699579}{F\+I\+L\+E\+\_\+\+N\+A\+ME}~\char`\"{}timer\+\_\+model.\+c\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущего файла. \end{DoxyCompactList}\item 
+\#define \hyperlink{timer__model_8c_a8231167941273d13f41c18f93e945669}{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+O\+P\+\_\+\+R\+E\+S\+U\+LT}~\char`\"{}Record\+: ??\+:??\char`\"{}
+\begin{DoxyCompactList}\small\item\em Строка по умолчанию для рекордного таймера. \end{DoxyCompactList}\item 
+\#define \hyperlink{timer__model_8c_a2bbbb638e384ee3b15e3403852d9a220}{S\+E\+C\+\_\+\+I\+N\+\_\+\+MN}~60
+\begin{DoxyCompactList}\small\item\em Количество секунд в минуте. \end{DoxyCompactList}\item 
+\#define \hyperlink{timer__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}timer\+\_\+model\+\_\+create\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\item 
+\#define \hyperlink{timer__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}timer\+\_\+model\+\_\+start\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\item 
+\#define \hyperlink{timer__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}timer\+\_\+model\+\_\+update\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\item 
+\#define \hyperlink{timer__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}timer\+\_\+model\+\_\+save\+\_\+result\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\item 
+\#define \hyperlink{timer__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}timer\+\_\+model\+\_\+destroy\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\item 
+\#define \hyperlink{timer__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}timer\+\_\+model\+\_\+is\+\_\+start\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structtimer__model}{timer\+\_\+model} $\ast$ \hyperlink{timer__model_8c_a3d025ec0b9a6057b56f8af4f37380bf2}{timer\+\_\+model\+\_\+create} ()
+\item 
+int \hyperlink{timer__model_8c_a11e6e8d7423a7bb69e61624ec9da4644}{timer\+\_\+model\+\_\+start} (\hyperlink{structtimer__model}{timer\+\_\+model} $\ast$t\+\_\+model)
+\item 
+int \hyperlink{timer__model_8c_a4e215e6292339c97f3cbfe56a2f1c966}{timer\+\_\+model\+\_\+update} (\hyperlink{structtimer__model}{timer\+\_\+model} $\ast$t\+\_\+model, time\+\_\+t update\+\_\+time)
+\item 
+int \hyperlink{timer__model_8c_a7c58a0b1d8326901d6cc4e6757bb3639}{timer\+\_\+model\+\_\+save\+\_\+result} (\hyperlink{structtimer__model}{timer\+\_\+model} $\ast$t\+\_\+model)
+\item 
+int \hyperlink{timer__model_8c_acb3edeec6620f2ed7904d2f8f85d2df8}{timer\+\_\+model\+\_\+destroy} (\hyperlink{structtimer__model}{timer\+\_\+model} $\ast$t\+\_\+model)
+\item 
+int \hyperlink{timer__model_8c_ad8426e424509fc31990ab0b56202bc2c}{timer\+\_\+model\+\_\+is\+\_\+start} (\hyperlink{structtimer__model}{timer\+\_\+model} $\ast$t\+\_\+model)
+\end{DoxyCompactItemize}
+
+
+\subsection{Макросы}
+\mbox{\Hypertarget{timer__model_8c_a8231167941273d13f41c18f93e945669}\label{timer__model_8c_a8231167941273d13f41c18f93e945669}} 
+\index{timer\+\_\+model.\+c@{timer\+\_\+model.\+c}!D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+O\+P\+\_\+\+R\+E\+S\+U\+LT@{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+O\+P\+\_\+\+R\+E\+S\+U\+LT}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+O\+P\+\_\+\+R\+E\+S\+U\+LT@{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+O\+P\+\_\+\+R\+E\+S\+U\+LT}!timer\+\_\+model.\+c@{timer\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+O\+P\+\_\+\+R\+E\+S\+U\+LT}{DEFAULT\_TOP\_RESULT}}
+{\footnotesize\ttfamily \#define D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+O\+P\+\_\+\+R\+E\+S\+U\+LT~\char`\"{}Record\+: ??\+:??\char`\"{}}
+
+
+
+Строка по умолчанию для рекордного таймера. 
+
+\mbox{\Hypertarget{timer__model_8c_ab117546549783a058d0321a287699579}\label{timer__model_8c_ab117546549783a058d0321a287699579}} 
+\index{timer\+\_\+model.\+c@{timer\+\_\+model.\+c}!F\+I\+L\+E\+\_\+\+N\+A\+ME@{F\+I\+L\+E\+\_\+\+N\+A\+ME}}
+\index{F\+I\+L\+E\+\_\+\+N\+A\+ME@{F\+I\+L\+E\+\_\+\+N\+A\+ME}!timer\+\_\+model.\+c@{timer\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+I\+L\+E\+\_\+\+N\+A\+ME}{FILE\_NAME}}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+N\+A\+ME~\char`\"{}timer\+\_\+model.\+c\char`\"{}}
+
+
+
+Имя текущего файла. 
+
+\mbox{\Hypertarget{timer__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{timer__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{timer\+\_\+model.\+c@{timer\+\_\+model.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!timer\+\_\+model.\+c@{timer\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}timer\+\_\+model\+\_\+create\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{timer__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{timer__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{timer\+\_\+model.\+c@{timer\+\_\+model.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!timer\+\_\+model.\+c@{timer\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}timer\+\_\+model\+\_\+start\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{timer__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{timer__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{timer\+\_\+model.\+c@{timer\+\_\+model.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!timer\+\_\+model.\+c@{timer\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}timer\+\_\+model\+\_\+update\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{timer__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{timer__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{timer\+\_\+model.\+c@{timer\+\_\+model.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!timer\+\_\+model.\+c@{timer\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}timer\+\_\+model\+\_\+save\+\_\+result\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{timer__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{timer__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{timer\+\_\+model.\+c@{timer\+\_\+model.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!timer\+\_\+model.\+c@{timer\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}timer\+\_\+model\+\_\+destroy\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{timer__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{timer__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{timer\+\_\+model.\+c@{timer\+\_\+model.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!timer\+\_\+model.\+c@{timer\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}timer\+\_\+model\+\_\+is\+\_\+start\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{timer__model_8c_a2bbbb638e384ee3b15e3403852d9a220}\label{timer__model_8c_a2bbbb638e384ee3b15e3403852d9a220}} 
+\index{timer\+\_\+model.\+c@{timer\+\_\+model.\+c}!S\+E\+C\+\_\+\+I\+N\+\_\+\+MN@{S\+E\+C\+\_\+\+I\+N\+\_\+\+MN}}
+\index{S\+E\+C\+\_\+\+I\+N\+\_\+\+MN@{S\+E\+C\+\_\+\+I\+N\+\_\+\+MN}!timer\+\_\+model.\+c@{timer\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{S\+E\+C\+\_\+\+I\+N\+\_\+\+MN}{SEC\_IN\_MN}}
+{\footnotesize\ttfamily \#define S\+E\+C\+\_\+\+I\+N\+\_\+\+MN~60}
+
+
+
+Количество секунд в минуте. 
+
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{timer__model_8c_a3d025ec0b9a6057b56f8af4f37380bf2}\label{timer__model_8c_a3d025ec0b9a6057b56f8af4f37380bf2}} 
+\index{timer\+\_\+model.\+c@{timer\+\_\+model.\+c}!timer\+\_\+model\+\_\+create@{timer\+\_\+model\+\_\+create}}
+\index{timer\+\_\+model\+\_\+create@{timer\+\_\+model\+\_\+create}!timer\+\_\+model.\+c@{timer\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{timer\+\_\+model\+\_\+create()}{timer\_model\_create()}}
+{\footnotesize\ttfamily \hyperlink{structtimer__model}{timer\+\_\+model}$\ast$ timer\+\_\+model\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Создание модели таймера. \begin{DoxyReturn}{Возвращает}
+Адрес, созданной модели. ~\newline
+ N\+U\+LL, если во время создания модели произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{timer__model_8c_acb3edeec6620f2ed7904d2f8f85d2df8}\label{timer__model_8c_acb3edeec6620f2ed7904d2f8f85d2df8}} 
+\index{timer\+\_\+model.\+c@{timer\+\_\+model.\+c}!timer\+\_\+model\+\_\+destroy@{timer\+\_\+model\+\_\+destroy}}
+\index{timer\+\_\+model\+\_\+destroy@{timer\+\_\+model\+\_\+destroy}!timer\+\_\+model.\+c@{timer\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{timer\+\_\+model\+\_\+destroy()}{timer\_model\_destroy()}}
+{\footnotesize\ttfamily int timer\+\_\+model\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{structtimer__model}{timer\+\_\+model} $\ast$}]{t\+\_\+model }\end{DoxyParamCaption})}
+
+Удаление модели таймера. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em t\+\_\+model} & -\/ адрес модели таймера, которую нужно удалить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если удаление прошло успешно. ~\newline
+ Ненулевое число, если во время удаления произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{timer__model_8c_ad8426e424509fc31990ab0b56202bc2c}\label{timer__model_8c_ad8426e424509fc31990ab0b56202bc2c}} 
+\index{timer\+\_\+model.\+c@{timer\+\_\+model.\+c}!timer\+\_\+model\+\_\+is\+\_\+start@{timer\+\_\+model\+\_\+is\+\_\+start}}
+\index{timer\+\_\+model\+\_\+is\+\_\+start@{timer\+\_\+model\+\_\+is\+\_\+start}!timer\+\_\+model.\+c@{timer\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{timer\+\_\+model\+\_\+is\+\_\+start()}{timer\_model\_is\_start()}}
+{\footnotesize\ttfamily int timer\+\_\+model\+\_\+is\+\_\+start (\begin{DoxyParamCaption}\item[{\hyperlink{structtimer__model}{timer\+\_\+model} $\ast$}]{t\+\_\+model }\end{DoxyParamCaption})}
+
+Проверка запуска таймера. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em t\+\_\+model} & -\/ адрес модели таймера, которую нужно проверить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Отрицательное число, если во время проверки произошла ошибка. ~\newline
+ Ноль, если таймер не запущен. ~\newline
+ Положительное число, если таймер запущен. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{timer__model_8c_a7c58a0b1d8326901d6cc4e6757bb3639}\label{timer__model_8c_a7c58a0b1d8326901d6cc4e6757bb3639}} 
+\index{timer\+\_\+model.\+c@{timer\+\_\+model.\+c}!timer\+\_\+model\+\_\+save\+\_\+result@{timer\+\_\+model\+\_\+save\+\_\+result}}
+\index{timer\+\_\+model\+\_\+save\+\_\+result@{timer\+\_\+model\+\_\+save\+\_\+result}!timer\+\_\+model.\+c@{timer\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{timer\+\_\+model\+\_\+save\+\_\+result()}{timer\_model\_save\_result()}}
+{\footnotesize\ttfamily int timer\+\_\+model\+\_\+save\+\_\+result (\begin{DoxyParamCaption}\item[{\hyperlink{structtimer__model}{timer\+\_\+model} $\ast$}]{t\+\_\+model }\end{DoxyParamCaption})}
+
+Сохранение рекорда. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em t\+\_\+model} & -\/ адрес модели таймера, рекорд которой нужно сохранить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если сохранение прошло успешно. ~\newline
+ Ненулевое число, если во время сохранения произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{timer__model_8c_a11e6e8d7423a7bb69e61624ec9da4644}\label{timer__model_8c_a11e6e8d7423a7bb69e61624ec9da4644}} 
+\index{timer\+\_\+model.\+c@{timer\+\_\+model.\+c}!timer\+\_\+model\+\_\+start@{timer\+\_\+model\+\_\+start}}
+\index{timer\+\_\+model\+\_\+start@{timer\+\_\+model\+\_\+start}!timer\+\_\+model.\+c@{timer\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{timer\+\_\+model\+\_\+start()}{timer\_model\_start()}}
+{\footnotesize\ttfamily int timer\+\_\+model\+\_\+start (\begin{DoxyParamCaption}\item[{\hyperlink{structtimer__model}{timer\+\_\+model} $\ast$}]{t\+\_\+model }\end{DoxyParamCaption})}
+
+Пуск таймера. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in,out}  & {\em t\+\_\+model} & -\/ адрес модели таймера, который нужно запустить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если запуск прошёл успешно. ~\newline
+ Ненулевое число, если во время запуска произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{timer__model_8c_a4e215e6292339c97f3cbfe56a2f1c966}\label{timer__model_8c_a4e215e6292339c97f3cbfe56a2f1c966}} 
+\index{timer\+\_\+model.\+c@{timer\+\_\+model.\+c}!timer\+\_\+model\+\_\+update@{timer\+\_\+model\+\_\+update}}
+\index{timer\+\_\+model\+\_\+update@{timer\+\_\+model\+\_\+update}!timer\+\_\+model.\+c@{timer\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{timer\+\_\+model\+\_\+update()}{timer\_model\_update()}}
+{\footnotesize\ttfamily int timer\+\_\+model\+\_\+update (\begin{DoxyParamCaption}\item[{\hyperlink{structtimer__model}{timer\+\_\+model} $\ast$}]{t\+\_\+model,  }\item[{time\+\_\+t}]{update\+\_\+time }\end{DoxyParamCaption})}
+
+Обновление данных модели таймера. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in,out}  & {\em t\+\_\+model} & -\/ адрес модели таймера, которую необходимо обновить. \\
+\hline
+\mbox{\tt in}  & {\em update\+\_\+time} & -\/ время, в которое происходит обновление. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если обновление прошло успешно. ~\newline
+ Ненулевое число, если во время обновления произошла ошибка. 
+\end{DoxyReturn}

@@ -1,0 +1,290 @@
+\hypertarget{label__view_8c}{}\section{Файл src/label\+\_\+view.c}
+\label{label__view_8c}\index{src/label\+\_\+view.\+c@{src/label\+\_\+view.\+c}}
+
+
+Файл, в котором реализованы функции для работы с элементом интерфейса\+: \char`\"{}надпись\char`\"{}.  
+
+
+{\ttfamily \#include \char`\"{}label\+\_\+view.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rectangle\+\_\+view.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}error\+\_\+report.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+font.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+ttf.\+h$>$}\newline
+Граф включаемых заголовочных файлов для label\+\_\+view.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{label__view_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{label__view_8c_a2c53d2bdf06b28382a374abb3bd92e63}{L\+A\+B\+E\+L\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE}~10
+\begin{DoxyCompactList}\small\item\em Размер рамки. \end{DoxyCompactList}\item 
+\#define \hyperlink{label__view_8c_a1610a21b358c3531db64b3208fa70e5b}{M\+I\+N\+\_\+\+H\+E\+I\+G\+HT}~(\hyperlink{label__view_8c_a2c53d2bdf06b28382a374abb3bd92e63}{L\+A\+B\+E\+L\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE} $\ast$ 2 + 10)
+\begin{DoxyCompactList}\small\item\em Минимальная высота надписи. \end{DoxyCompactList}\item 
+\#define \hyperlink{label__view_8c_ad3ee0cc681d736cb6d41c4ebb04c0ae4}{M\+I\+N\+\_\+\+W\+I\+D\+TH}~(\hyperlink{label__view_8c_a2c53d2bdf06b28382a374abb3bd92e63}{L\+A\+B\+E\+L\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE} $\ast$ 2 + 45)
+\begin{DoxyCompactList}\small\item\em Минимальная ширина надписи. \end{DoxyCompactList}\item 
+\#define \hyperlink{label__view_8c_a806c5e8aebd09085d3d46107c7283e71}{P\+A\+T\+H\+\_\+\+F\+O\+NT}~\char`\"{}res/Very\+Convincing.\+ttf\char`\"{}
+\begin{DoxyCompactList}\small\item\em Путь к файлу со шрифтом. \end{DoxyCompactList}\item 
+\#define \hyperlink{label__view_8c_ab117546549783a058d0321a287699579}{F\+I\+L\+E\+\_\+\+N\+A\+ME}~\char`\"{}label\+\_\+view.\+c\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущего файла. \end{DoxyCompactList}\item 
+\#define \hyperlink{label__view_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}label\+\_\+view\+\_\+init\+\_\+font\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\item 
+\#define \hyperlink{label__view_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}label\+\_\+view\+\_\+create\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\item 
+\#define \hyperlink{label__view_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}label\+\_\+view\+\_\+draw\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\item 
+\#define \hyperlink{label__view_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}label\+\_\+view\+\_\+set\+\_\+text\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\item 
+\#define \hyperlink{label__view_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}label\+\_\+view\+\_\+destroy\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{label__view_8c_aa0b2902b394029608b3f1cc1bc088f8c}{label\+\_\+view\+\_\+init\+\_\+font} ()
+\item 
+int \hyperlink{label__view_8c_a22a1e7fc4834fa2f0b0e572889b36ba7}{label\+\_\+view\+\_\+destroy\+\_\+font} ()
+\item 
+\hyperlink{structlabel__view}{label\+\_\+view} $\ast$ \hyperlink{label__view_8c_a9c2dc97d9adda28c54c27ab98204d82d}{label\+\_\+view\+\_\+create} (const char $\ast$text, unsigned int width, unsigned int height, A\+L\+L\+E\+G\+R\+O\+\_\+\+C\+O\+L\+OR color\+\_\+text, A\+L\+L\+E\+G\+R\+O\+\_\+\+C\+O\+L\+OR color\+\_\+background, A\+L\+L\+E\+G\+R\+O\+\_\+\+C\+O\+L\+OR color\+\_\+border)
+\item 
+int \hyperlink{label__view_8c_a9e7cb527cf441612379104d571dcfa03}{label\+\_\+view\+\_\+draw} (\hyperlink{structlabel__view}{label\+\_\+view} $\ast$l\+\_\+view, unsigned int x, unsigned int y)
+\item 
+int \hyperlink{label__view_8c_af2631fe70fdcba7a10ce366577d7c285}{label\+\_\+view\+\_\+set\+\_\+text} (\hyperlink{structlabel__view}{label\+\_\+view} $\ast$l\+\_\+view, const char $\ast$text)
+\item 
+int \hyperlink{label__view_8c_ad95c787547beb9badc89438681b0b7f4}{label\+\_\+view\+\_\+destroy} (\hyperlink{structlabel__view}{label\+\_\+view} $\ast$l\+\_\+view)
+\end{DoxyCompactItemize}
+\subsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+A\+L\+L\+E\+G\+R\+O\+\_\+\+F\+O\+NT $\ast$ \hyperlink{label__view_8c_ae4254615de94af5fc74d43e8b676dcf9}{font} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em Адрес объекта со шрифтом. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Файл, в котором реализованы функции для работы с элементом интерфейса\+: \char`\"{}надпись\char`\"{}. 
+
+
+
+\subsection{Макросы}
+\mbox{\Hypertarget{label__view_8c_ab117546549783a058d0321a287699579}\label{label__view_8c_ab117546549783a058d0321a287699579}} 
+\index{label\+\_\+view.\+c@{label\+\_\+view.\+c}!F\+I\+L\+E\+\_\+\+N\+A\+ME@{F\+I\+L\+E\+\_\+\+N\+A\+ME}}
+\index{F\+I\+L\+E\+\_\+\+N\+A\+ME@{F\+I\+L\+E\+\_\+\+N\+A\+ME}!label\+\_\+view.\+c@{label\+\_\+view.\+c}}
+\subsubsection{\texorpdfstring{F\+I\+L\+E\+\_\+\+N\+A\+ME}{FILE\_NAME}}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+N\+A\+ME~\char`\"{}label\+\_\+view.\+c\char`\"{}}
+
+
+
+Имя текущего файла. 
+
+\mbox{\Hypertarget{label__view_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{label__view_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{label\+\_\+view.\+c@{label\+\_\+view.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!label\+\_\+view.\+c@{label\+\_\+view.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}label\+\_\+view\+\_\+init\+\_\+font\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{label__view_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{label__view_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{label\+\_\+view.\+c@{label\+\_\+view.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!label\+\_\+view.\+c@{label\+\_\+view.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}label\+\_\+view\+\_\+create\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{label__view_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{label__view_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{label\+\_\+view.\+c@{label\+\_\+view.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!label\+\_\+view.\+c@{label\+\_\+view.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}label\+\_\+view\+\_\+draw\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{label__view_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{label__view_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{label\+\_\+view.\+c@{label\+\_\+view.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!label\+\_\+view.\+c@{label\+\_\+view.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}label\+\_\+view\+\_\+set\+\_\+text\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{label__view_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{label__view_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{label\+\_\+view.\+c@{label\+\_\+view.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!label\+\_\+view.\+c@{label\+\_\+view.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}label\+\_\+view\+\_\+destroy\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{label__view_8c_a2c53d2bdf06b28382a374abb3bd92e63}\label{label__view_8c_a2c53d2bdf06b28382a374abb3bd92e63}} 
+\index{label\+\_\+view.\+c@{label\+\_\+view.\+c}!L\+A\+B\+E\+L\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE@{L\+A\+B\+E\+L\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE}}
+\index{L\+A\+B\+E\+L\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE@{L\+A\+B\+E\+L\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE}!label\+\_\+view.\+c@{label\+\_\+view.\+c}}
+\subsubsection{\texorpdfstring{L\+A\+B\+E\+L\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE}{LABEL\_BORDER\_SIZE}}
+{\footnotesize\ttfamily \#define L\+A\+B\+E\+L\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE~10}
+
+
+
+Размер рамки. 
+
+\mbox{\Hypertarget{label__view_8c_a1610a21b358c3531db64b3208fa70e5b}\label{label__view_8c_a1610a21b358c3531db64b3208fa70e5b}} 
+\index{label\+\_\+view.\+c@{label\+\_\+view.\+c}!M\+I\+N\+\_\+\+H\+E\+I\+G\+HT@{M\+I\+N\+\_\+\+H\+E\+I\+G\+HT}}
+\index{M\+I\+N\+\_\+\+H\+E\+I\+G\+HT@{M\+I\+N\+\_\+\+H\+E\+I\+G\+HT}!label\+\_\+view.\+c@{label\+\_\+view.\+c}}
+\subsubsection{\texorpdfstring{M\+I\+N\+\_\+\+H\+E\+I\+G\+HT}{MIN\_HEIGHT}}
+{\footnotesize\ttfamily \#define M\+I\+N\+\_\+\+H\+E\+I\+G\+HT~(\hyperlink{label__view_8c_a2c53d2bdf06b28382a374abb3bd92e63}{L\+A\+B\+E\+L\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE} $\ast$ 2 + 10)}
+
+
+
+Минимальная высота надписи. 
+
+\mbox{\Hypertarget{label__view_8c_ad3ee0cc681d736cb6d41c4ebb04c0ae4}\label{label__view_8c_ad3ee0cc681d736cb6d41c4ebb04c0ae4}} 
+\index{label\+\_\+view.\+c@{label\+\_\+view.\+c}!M\+I\+N\+\_\+\+W\+I\+D\+TH@{M\+I\+N\+\_\+\+W\+I\+D\+TH}}
+\index{M\+I\+N\+\_\+\+W\+I\+D\+TH@{M\+I\+N\+\_\+\+W\+I\+D\+TH}!label\+\_\+view.\+c@{label\+\_\+view.\+c}}
+\subsubsection{\texorpdfstring{M\+I\+N\+\_\+\+W\+I\+D\+TH}{MIN\_WIDTH}}
+{\footnotesize\ttfamily \#define M\+I\+N\+\_\+\+W\+I\+D\+TH~(\hyperlink{label__view_8c_a2c53d2bdf06b28382a374abb3bd92e63}{L\+A\+B\+E\+L\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE} $\ast$ 2 + 45)}
+
+
+
+Минимальная ширина надписи. 
+
+\mbox{\Hypertarget{label__view_8c_a806c5e8aebd09085d3d46107c7283e71}\label{label__view_8c_a806c5e8aebd09085d3d46107c7283e71}} 
+\index{label\+\_\+view.\+c@{label\+\_\+view.\+c}!P\+A\+T\+H\+\_\+\+F\+O\+NT@{P\+A\+T\+H\+\_\+\+F\+O\+NT}}
+\index{P\+A\+T\+H\+\_\+\+F\+O\+NT@{P\+A\+T\+H\+\_\+\+F\+O\+NT}!label\+\_\+view.\+c@{label\+\_\+view.\+c}}
+\subsubsection{\texorpdfstring{P\+A\+T\+H\+\_\+\+F\+O\+NT}{PATH\_FONT}}
+{\footnotesize\ttfamily \#define P\+A\+T\+H\+\_\+\+F\+O\+NT~\char`\"{}res/Very\+Convincing.\+ttf\char`\"{}}
+
+
+
+Путь к файлу со шрифтом. 
+
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{label__view_8c_a9c2dc97d9adda28c54c27ab98204d82d}\label{label__view_8c_a9c2dc97d9adda28c54c27ab98204d82d}} 
+\index{label\+\_\+view.\+c@{label\+\_\+view.\+c}!label\+\_\+view\+\_\+create@{label\+\_\+view\+\_\+create}}
+\index{label\+\_\+view\+\_\+create@{label\+\_\+view\+\_\+create}!label\+\_\+view.\+c@{label\+\_\+view.\+c}}
+\subsubsection{\texorpdfstring{label\+\_\+view\+\_\+create()}{label\_view\_create()}}
+{\footnotesize\ttfamily \hyperlink{structlabel__view}{label\+\_\+view}$\ast$ label\+\_\+view\+\_\+create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{unsigned int}]{width,  }\item[{unsigned int}]{height,  }\item[{A\+L\+L\+E\+G\+R\+O\+\_\+\+C\+O\+L\+OR}]{color\+\_\+text,  }\item[{A\+L\+L\+E\+G\+R\+O\+\_\+\+C\+O\+L\+OR}]{color\+\_\+background,  }\item[{A\+L\+L\+E\+G\+R\+O\+\_\+\+C\+O\+L\+OR}]{color\+\_\+border }\end{DoxyParamCaption})}
+
+Создание надписи. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em text} & -\/ текст. \\
+\hline
+\mbox{\tt in}  & {\em width} & -\/ ширина. \\
+\hline
+\mbox{\tt in}  & {\em height} & -\/ высота. \\
+\hline
+\mbox{\tt in}  & {\em color\+\_\+text} & -\/ цвет текста. \\
+\hline
+\mbox{\tt in}  & {\em color\+\_\+background} & -\/ цвет фона. \\
+\hline
+\mbox{\tt in}  & {\em color\+\_\+border} & -\/ цвет рамки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Адрес, созданной надписи. ~\newline
+ N\+U\+LL, если во время создания надписи произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{label__view_8c_ad95c787547beb9badc89438681b0b7f4}\label{label__view_8c_ad95c787547beb9badc89438681b0b7f4}} 
+\index{label\+\_\+view.\+c@{label\+\_\+view.\+c}!label\+\_\+view\+\_\+destroy@{label\+\_\+view\+\_\+destroy}}
+\index{label\+\_\+view\+\_\+destroy@{label\+\_\+view\+\_\+destroy}!label\+\_\+view.\+c@{label\+\_\+view.\+c}}
+\subsubsection{\texorpdfstring{label\+\_\+view\+\_\+destroy()}{label\_view\_destroy()}}
+{\footnotesize\ttfamily int label\+\_\+view\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{structlabel__view}{label\+\_\+view} $\ast$}]{l\+\_\+view }\end{DoxyParamCaption})}
+
+Удаление надписи. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em l\+\_\+view} & -\/ адрес надписи, которую нужно удалить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если удаление прошло успешно. ~\newline
+ Ненулевое число, если во время удаления произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{label__view_8c_a22a1e7fc4834fa2f0b0e572889b36ba7}\label{label__view_8c_a22a1e7fc4834fa2f0b0e572889b36ba7}} 
+\index{label\+\_\+view.\+c@{label\+\_\+view.\+c}!label\+\_\+view\+\_\+destroy\+\_\+font@{label\+\_\+view\+\_\+destroy\+\_\+font}}
+\index{label\+\_\+view\+\_\+destroy\+\_\+font@{label\+\_\+view\+\_\+destroy\+\_\+font}!label\+\_\+view.\+c@{label\+\_\+view.\+c}}
+\subsubsection{\texorpdfstring{label\+\_\+view\+\_\+destroy\+\_\+font()}{label\_view\_destroy\_font()}}
+{\footnotesize\ttfamily int label\+\_\+view\+\_\+destroy\+\_\+font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Удаление шрифта. \begin{DoxyReturn}{Возвращает}
+Ноль, если удаление прошло успешно. ~\newline
+ Ненулевое число, если во время удаления произошла ошибка.
+\end{DoxyReturn}
+\begin{DoxyWarning}{Предупреждения}
+Эту функцию обязательно нужно вызвать после удаления всех элементов интерфейса \char`\"{}надпись\char`\"{}. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{label__view_8c_a9e7cb527cf441612379104d571dcfa03}\label{label__view_8c_a9e7cb527cf441612379104d571dcfa03}} 
+\index{label\+\_\+view.\+c@{label\+\_\+view.\+c}!label\+\_\+view\+\_\+draw@{label\+\_\+view\+\_\+draw}}
+\index{label\+\_\+view\+\_\+draw@{label\+\_\+view\+\_\+draw}!label\+\_\+view.\+c@{label\+\_\+view.\+c}}
+\subsubsection{\texorpdfstring{label\+\_\+view\+\_\+draw()}{label\_view\_draw()}}
+{\footnotesize\ttfamily int label\+\_\+view\+\_\+draw (\begin{DoxyParamCaption}\item[{\hyperlink{structlabel__view}{label\+\_\+view} $\ast$}]{l\+\_\+view,  }\item[{unsigned int}]{x,  }\item[{unsigned int}]{y }\end{DoxyParamCaption})}
+
+Рисование надписи. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em l\+\_\+view} & -\/ адрес надписи, которую нужно нарисовать. \\
+\hline
+\mbox{\tt in}  & {\em x} & -\/ координата рисования верхнего левого угла надписи по оси OX. \\
+\hline
+\mbox{\tt in}  & {\em y} & -\/ координата рисования верхнего левого угла надписи по оси OY. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если надпись была успешно отрисована. ~\newline
+ Ненулевое число, если во время рисования произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{label__view_8c_aa0b2902b394029608b3f1cc1bc088f8c}\label{label__view_8c_aa0b2902b394029608b3f1cc1bc088f8c}} 
+\index{label\+\_\+view.\+c@{label\+\_\+view.\+c}!label\+\_\+view\+\_\+init\+\_\+font@{label\+\_\+view\+\_\+init\+\_\+font}}
+\index{label\+\_\+view\+\_\+init\+\_\+font@{label\+\_\+view\+\_\+init\+\_\+font}!label\+\_\+view.\+c@{label\+\_\+view.\+c}}
+\subsubsection{\texorpdfstring{label\+\_\+view\+\_\+init\+\_\+font()}{label\_view\_init\_font()}}
+{\footnotesize\ttfamily int label\+\_\+view\+\_\+init\+\_\+font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Инициализация шрифта текстов надписей. \begin{DoxyReturn}{Возвращает}
+Ноль, если инифиализация прошла успешно. ~\newline
+ Ненулевое число, если во время инициализации произошла ошибка.
+\end{DoxyReturn}
+\begin{DoxyWarning}{Предупреждения}
+Эту функцию обязательно нужно вызвать до создания элементов интерфейса \char`\"{}надпись\char`\"{}. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{label__view_8c_af2631fe70fdcba7a10ce366577d7c285}\label{label__view_8c_af2631fe70fdcba7a10ce366577d7c285}} 
+\index{label\+\_\+view.\+c@{label\+\_\+view.\+c}!label\+\_\+view\+\_\+set\+\_\+text@{label\+\_\+view\+\_\+set\+\_\+text}}
+\index{label\+\_\+view\+\_\+set\+\_\+text@{label\+\_\+view\+\_\+set\+\_\+text}!label\+\_\+view.\+c@{label\+\_\+view.\+c}}
+\subsubsection{\texorpdfstring{label\+\_\+view\+\_\+set\+\_\+text()}{label\_view\_set\_text()}}
+{\footnotesize\ttfamily int label\+\_\+view\+\_\+set\+\_\+text (\begin{DoxyParamCaption}\item[{\hyperlink{structlabel__view}{label\+\_\+view} $\ast$}]{l\+\_\+view,  }\item[{const char $\ast$}]{text }\end{DoxyParamCaption})}
+
+Изменение текста надписи. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in,out}  & {\em l\+\_\+view} & -\/ адрес надписи, текст которой нужно изменить. \\
+\hline
+\mbox{\tt in}  & {\em text} & -\/ новый текст надписи. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если текст надписи был успешно изменен. ~\newline
+ Ненулевое число, если во время изменения текста произошла ошибка. 
+\end{DoxyReturn}
+
+
+\subsection{Переменные}
+\mbox{\Hypertarget{label__view_8c_ae4254615de94af5fc74d43e8b676dcf9}\label{label__view_8c_ae4254615de94af5fc74d43e8b676dcf9}} 
+\index{label\+\_\+view.\+c@{label\+\_\+view.\+c}!font@{font}}
+\index{font@{font}!label\+\_\+view.\+c@{label\+\_\+view.\+c}}
+\subsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily A\+L\+L\+E\+G\+R\+O\+\_\+\+F\+O\+NT$\ast$ font = N\+U\+LL}
+
+
+
+Адрес объекта со шрифтом. 
+

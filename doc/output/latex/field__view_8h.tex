@@ -1,0 +1,176 @@
+\hypertarget{field__view_8h}{}\section{Файл src/field\+\_\+view.h}
+\label{field__view_8h}\index{src/field\+\_\+view.\+h@{src/field\+\_\+view.\+h}}
+
+
+Файл, в котором опеределены функции для работы с отображением игрового поля.  
+
+
+{\ttfamily \#include \char`\"{}player\+\_\+model.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}player\+\_\+view.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}label\+\_\+view.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$allegro5/allegro.\+h$>$}\newline
+Граф включаемых заголовочных файлов для field\+\_\+view.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{field__view_8h__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{field__view_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structfield__view}{field\+\_\+view}
+\begin{DoxyCompactList}\small\item\em Структура, которая описывает отображение игрового поля. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{field__view_8h_aec9655085e48e4fda789531146e9f1d0}{F\+I\+E\+L\+D\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE}~10
+\begin{DoxyCompactList}\small\item\em Размер рамки. \end{DoxyCompactList}\item 
+\#define \hyperlink{field__view_8h_ac8b40aa2e97ca893d0e2b289bcb47b71}{F\+I\+E\+L\+D\+\_\+\+H\+E\+G\+I\+H\+T\+\_\+\+F\+I\+N\+I\+SH}~70
+\begin{DoxyCompactList}\small\item\em Высота надписи \char`\"{}\+Finish\char`\"{}. \end{DoxyCompactList}\item 
+\#define \hyperlink{field__view_8h_acd7c051921458cc9c3a5ee750df2b0c3}{F\+I\+E\+L\+D\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+L\+OR}~al\+\_\+map\+\_\+rgb(0, 0, 0)
+\begin{DoxyCompactList}\small\item\em Цвет рамки. \end{DoxyCompactList}\item 
+\#define \hyperlink{field__view_8h_a8a09f9e515afb676c783bb01e3a058f4}{F\+I\+E\+L\+D\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+C\+O\+L\+OR}~al\+\_\+map\+\_\+rgb(255, 255, 255)
+\begin{DoxyCompactList}\small\item\em Цвет фона. \end{DoxyCompactList}\item 
+\#define \hyperlink{field__view_8h_ac7574d320ad8df89f500dedecb681b41}{F\+I\+E\+L\+D\+\_\+\+F\+I\+N\+I\+S\+H\+\_\+\+C\+O\+L\+OR}~al\+\_\+map\+\_\+rgb(255, 99, 71)
+\begin{DoxyCompactList}\small\item\em Цвет надписи \char`\"{}\+Finish\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structfield__view}{field\+\_\+view} \hyperlink{field__view_8h_ae82b096186d36dc129037b5d35937f88}{field\+\_\+view}
+\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structfield__view}{field\+\_\+view} $\ast$ \hyperlink{field__view_8h_a21ada3aca6c3fffd7ebc7b12776cf443}{field\+\_\+view\+\_\+create} (\hyperlink{structplayer__model}{player\+\_\+model} $\ast$p\+\_\+model, unsigned int width, unsigned int height)
+\item 
+int \hyperlink{field__view_8h_a44aa3af68e8a6b237018bfe7cfb70c33}{field\+\_\+view\+\_\+draw} (\hyperlink{structfield__view}{field\+\_\+view} $\ast$f\+\_\+view)
+\item 
+int \hyperlink{field__view_8h_a3b5569e6513c7010fd537ea62876309f}{field\+\_\+view\+\_\+destroy} (\hyperlink{structfield__view}{field\+\_\+view} $\ast$f\+\_\+view)
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Файл, в котором опеределены функции для работы с отображением игрового поля. 
+
+
+
+\subsection{Макросы}
+\mbox{\Hypertarget{field__view_8h_a8a09f9e515afb676c783bb01e3a058f4}\label{field__view_8h_a8a09f9e515afb676c783bb01e3a058f4}} 
+\index{field\+\_\+view.\+h@{field\+\_\+view.\+h}!F\+I\+E\+L\+D\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+C\+O\+L\+OR@{F\+I\+E\+L\+D\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+C\+O\+L\+OR}}
+\index{F\+I\+E\+L\+D\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+C\+O\+L\+OR@{F\+I\+E\+L\+D\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+C\+O\+L\+OR}!field\+\_\+view.\+h@{field\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{F\+I\+E\+L\+D\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+C\+O\+L\+OR}{FIELD\_BACKGROUND\_COLOR}}
+{\footnotesize\ttfamily \#define F\+I\+E\+L\+D\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+C\+O\+L\+OR~al\+\_\+map\+\_\+rgb(255, 255, 255)}
+
+
+
+Цвет фона. 
+
+\mbox{\Hypertarget{field__view_8h_acd7c051921458cc9c3a5ee750df2b0c3}\label{field__view_8h_acd7c051921458cc9c3a5ee750df2b0c3}} 
+\index{field\+\_\+view.\+h@{field\+\_\+view.\+h}!F\+I\+E\+L\+D\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+L\+OR@{F\+I\+E\+L\+D\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+L\+OR}}
+\index{F\+I\+E\+L\+D\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+L\+OR@{F\+I\+E\+L\+D\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+L\+OR}!field\+\_\+view.\+h@{field\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{F\+I\+E\+L\+D\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+L\+OR}{FIELD\_BORDER\_COLOR}}
+{\footnotesize\ttfamily \#define F\+I\+E\+L\+D\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+C\+O\+L\+OR~al\+\_\+map\+\_\+rgb(0, 0, 0)}
+
+
+
+Цвет рамки. 
+
+\mbox{\Hypertarget{field__view_8h_aec9655085e48e4fda789531146e9f1d0}\label{field__view_8h_aec9655085e48e4fda789531146e9f1d0}} 
+\index{field\+\_\+view.\+h@{field\+\_\+view.\+h}!F\+I\+E\+L\+D\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE@{F\+I\+E\+L\+D\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE}}
+\index{F\+I\+E\+L\+D\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE@{F\+I\+E\+L\+D\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE}!field\+\_\+view.\+h@{field\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{F\+I\+E\+L\+D\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE}{FIELD\_BORDER\_SIZE}}
+{\footnotesize\ttfamily \#define F\+I\+E\+L\+D\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+S\+I\+ZE~10}
+
+
+
+Размер рамки. 
+
+\mbox{\Hypertarget{field__view_8h_ac7574d320ad8df89f500dedecb681b41}\label{field__view_8h_ac7574d320ad8df89f500dedecb681b41}} 
+\index{field\+\_\+view.\+h@{field\+\_\+view.\+h}!F\+I\+E\+L\+D\+\_\+\+F\+I\+N\+I\+S\+H\+\_\+\+C\+O\+L\+OR@{F\+I\+E\+L\+D\+\_\+\+F\+I\+N\+I\+S\+H\+\_\+\+C\+O\+L\+OR}}
+\index{F\+I\+E\+L\+D\+\_\+\+F\+I\+N\+I\+S\+H\+\_\+\+C\+O\+L\+OR@{F\+I\+E\+L\+D\+\_\+\+F\+I\+N\+I\+S\+H\+\_\+\+C\+O\+L\+OR}!field\+\_\+view.\+h@{field\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{F\+I\+E\+L\+D\+\_\+\+F\+I\+N\+I\+S\+H\+\_\+\+C\+O\+L\+OR}{FIELD\_FINISH\_COLOR}}
+{\footnotesize\ttfamily \#define F\+I\+E\+L\+D\+\_\+\+F\+I\+N\+I\+S\+H\+\_\+\+C\+O\+L\+OR~al\+\_\+map\+\_\+rgb(255, 99, 71)}
+
+
+
+Цвет надписи \char`\"{}\+Finish\char`\"{}. 
+
+\mbox{\Hypertarget{field__view_8h_ac8b40aa2e97ca893d0e2b289bcb47b71}\label{field__view_8h_ac8b40aa2e97ca893d0e2b289bcb47b71}} 
+\index{field\+\_\+view.\+h@{field\+\_\+view.\+h}!F\+I\+E\+L\+D\+\_\+\+H\+E\+G\+I\+H\+T\+\_\+\+F\+I\+N\+I\+SH@{F\+I\+E\+L\+D\+\_\+\+H\+E\+G\+I\+H\+T\+\_\+\+F\+I\+N\+I\+SH}}
+\index{F\+I\+E\+L\+D\+\_\+\+H\+E\+G\+I\+H\+T\+\_\+\+F\+I\+N\+I\+SH@{F\+I\+E\+L\+D\+\_\+\+H\+E\+G\+I\+H\+T\+\_\+\+F\+I\+N\+I\+SH}!field\+\_\+view.\+h@{field\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{F\+I\+E\+L\+D\+\_\+\+H\+E\+G\+I\+H\+T\+\_\+\+F\+I\+N\+I\+SH}{FIELD\_HEGIHT\_FINISH}}
+{\footnotesize\ttfamily \#define F\+I\+E\+L\+D\+\_\+\+H\+E\+G\+I\+H\+T\+\_\+\+F\+I\+N\+I\+SH~70}
+
+
+
+Высота надписи \char`\"{}\+Finish\char`\"{}. 
+
+
+
+\subsection{Типы}
+\mbox{\Hypertarget{field__view_8h_ae82b096186d36dc129037b5d35937f88}\label{field__view_8h_ae82b096186d36dc129037b5d35937f88}} 
+\index{field\+\_\+view.\+h@{field\+\_\+view.\+h}!field\+\_\+view@{field\+\_\+view}}
+\index{field\+\_\+view@{field\+\_\+view}!field\+\_\+view.\+h@{field\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{field\+\_\+view}{field\_view}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structfield__view}{field\+\_\+view} \hyperlink{structfield__view}{field\+\_\+view}}
+
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{field__view_8h_a21ada3aca6c3fffd7ebc7b12776cf443}\label{field__view_8h_a21ada3aca6c3fffd7ebc7b12776cf443}} 
+\index{field\+\_\+view.\+h@{field\+\_\+view.\+h}!field\+\_\+view\+\_\+create@{field\+\_\+view\+\_\+create}}
+\index{field\+\_\+view\+\_\+create@{field\+\_\+view\+\_\+create}!field\+\_\+view.\+h@{field\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{field\+\_\+view\+\_\+create()}{field\_view\_create()}}
+{\footnotesize\ttfamily \hyperlink{structfield__view}{field\+\_\+view}$\ast$ field\+\_\+view\+\_\+create (\begin{DoxyParamCaption}\item[{\hyperlink{structplayer__model}{player\+\_\+model} $\ast$}]{p\+\_\+model,  }\item[{unsigned int}]{width,  }\item[{unsigned int}]{height }\end{DoxyParamCaption})}
+
+Создание отображения игрового поля. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em p\+\_\+model} & -\/ модель игрока. \\
+\hline
+\mbox{\tt in}  & {\em width} & -\/ ширина поля. \\
+\hline
+\mbox{\tt in}  & {\em height} & -\/ высота поля. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Адрес, созданного отображения игрового поля. ~\newline
+ N\+U\+LL, если во время создания отображения игрового поля произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{field__view_8h_a3b5569e6513c7010fd537ea62876309f}\label{field__view_8h_a3b5569e6513c7010fd537ea62876309f}} 
+\index{field\+\_\+view.\+h@{field\+\_\+view.\+h}!field\+\_\+view\+\_\+destroy@{field\+\_\+view\+\_\+destroy}}
+\index{field\+\_\+view\+\_\+destroy@{field\+\_\+view\+\_\+destroy}!field\+\_\+view.\+h@{field\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{field\+\_\+view\+\_\+destroy()}{field\_view\_destroy()}}
+{\footnotesize\ttfamily int field\+\_\+view\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{structfield__view}{field\+\_\+view} $\ast$}]{f\+\_\+view }\end{DoxyParamCaption})}
+
+Удаление отображения игрового поля. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em f\+\_\+view} & -\/ адрес отображения игрового поля, которое нужно удалить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если удаление прошло успешно. ~\newline
+ Ненулевое число, если во время удаления произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{field__view_8h_a44aa3af68e8a6b237018bfe7cfb70c33}\label{field__view_8h_a44aa3af68e8a6b237018bfe7cfb70c33}} 
+\index{field\+\_\+view.\+h@{field\+\_\+view.\+h}!field\+\_\+view\+\_\+draw@{field\+\_\+view\+\_\+draw}}
+\index{field\+\_\+view\+\_\+draw@{field\+\_\+view\+\_\+draw}!field\+\_\+view.\+h@{field\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{field\+\_\+view\+\_\+draw()}{field\_view\_draw()}}
+{\footnotesize\ttfamily int field\+\_\+view\+\_\+draw (\begin{DoxyParamCaption}\item[{\hyperlink{structfield__view}{field\+\_\+view} $\ast$}]{f\+\_\+view }\end{DoxyParamCaption})}
+
+Рисование отображения игрового поля. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em f\+\_\+view} & -\/ адрес отображения игрового, которое нужно нарисовать. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если отображение было успешно отрисовано. ~\newline
+ Ненулевое число, если во время рисования произошла ошибка. 
+\end{DoxyReturn}

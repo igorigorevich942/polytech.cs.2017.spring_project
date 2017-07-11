@@ -1,0 +1,155 @@
+\hypertarget{game__view_8h}{}\section{Файл src/game\+\_\+view.h}
+\label{game__view_8h}\index{src/game\+\_\+view.\+h@{src/game\+\_\+view.\+h}}
+
+
+Файл, в котором опеределены функции для работы с отображением игры.  
+
+
+{\ttfamily \#include \char`\"{}game\+\_\+model.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}field\+\_\+view.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}timer\+\_\+view.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$allegro5/allegro.\+h$>$}\newline
+Граф включаемых заголовочных файлов для game\+\_\+view.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8h__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{game__view_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structgame__view}{game\+\_\+view}
+\begin{DoxyCompactList}\small\item\em Структура, которая описывает отображение игры. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{game__view_8h_ac92ca5ab87034a348decad7ee8d4bd1b}{F\+PS}~60
+\begin{DoxyCompactList}\small\item\em Частота обновления кадров в секунду. \end{DoxyCompactList}\item 
+\#define \hyperlink{game__view_8h_a2cd109632a6dcccaa80b43561b1ab700}{S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH}~800
+\begin{DoxyCompactList}\small\item\em Ширина экрана. \end{DoxyCompactList}\item 
+\#define \hyperlink{game__view_8h_a6974d08a74da681b3957b2fead2608b8}{S\+C\+R\+E\+E\+N\+\_\+\+H\+E\+I\+G\+HT}~600
+\begin{DoxyCompactList}\small\item\em Высота экрана. \end{DoxyCompactList}\item 
+\#define \hyperlink{game__view_8h_a1c621d1e6010992bc7f6f9f0472495cc}{G\+A\+M\+E\+\_\+\+V\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+ND}~al\+\_\+map\+\_\+rgb(255, 255, 255)
+\begin{DoxyCompactList}\small\item\em Цвет фона. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structgame__view}{game\+\_\+view} \hyperlink{game__view_8h_a65989b0931b52a73cb13d10fd2ae77dd}{game\+\_\+view}
+\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structgame__view}{game\+\_\+view} $\ast$ \hyperlink{game__view_8h_a5d31da96dc1fcded5af87b110ea1cd98}{game\+\_\+view\+\_\+create} ()
+\item 
+int \hyperlink{game__view_8h_a58c54dcc496dca3fe69803f83b89a877}{game\+\_\+view\+\_\+start} (\hyperlink{structgame__view}{game\+\_\+view} $\ast$g\+\_\+view)
+\item 
+int \hyperlink{game__view_8h_abc345bb97069dd789b670fe8f1f23a4d}{game\+\_\+view\+\_\+destroy} (\hyperlink{structgame__view}{game\+\_\+view} $\ast$g\+\_\+view)
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Файл, в котором опеределены функции для работы с отображением игры. 
+
+
+
+\subsection{Макросы}
+\mbox{\Hypertarget{game__view_8h_ac92ca5ab87034a348decad7ee8d4bd1b}\label{game__view_8h_ac92ca5ab87034a348decad7ee8d4bd1b}} 
+\index{game\+\_\+view.\+h@{game\+\_\+view.\+h}!F\+PS@{F\+PS}}
+\index{F\+PS@{F\+PS}!game\+\_\+view.\+h@{game\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{F\+PS}{FPS}}
+{\footnotesize\ttfamily \#define F\+PS~60}
+
+
+
+Частота обновления кадров в секунду. 
+
+\mbox{\Hypertarget{game__view_8h_a1c621d1e6010992bc7f6f9f0472495cc}\label{game__view_8h_a1c621d1e6010992bc7f6f9f0472495cc}} 
+\index{game\+\_\+view.\+h@{game\+\_\+view.\+h}!G\+A\+M\+E\+\_\+\+V\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+ND@{G\+A\+M\+E\+\_\+\+V\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+ND}}
+\index{G\+A\+M\+E\+\_\+\+V\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+ND@{G\+A\+M\+E\+\_\+\+V\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+ND}!game\+\_\+view.\+h@{game\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{G\+A\+M\+E\+\_\+\+V\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+ND}{GAME\_V\_BACKGROUND}}
+{\footnotesize\ttfamily \#define G\+A\+M\+E\+\_\+\+V\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+ND~al\+\_\+map\+\_\+rgb(255, 255, 255)}
+
+
+
+Цвет фона. 
+
+\mbox{\Hypertarget{game__view_8h_a6974d08a74da681b3957b2fead2608b8}\label{game__view_8h_a6974d08a74da681b3957b2fead2608b8}} 
+\index{game\+\_\+view.\+h@{game\+\_\+view.\+h}!S\+C\+R\+E\+E\+N\+\_\+\+H\+E\+I\+G\+HT@{S\+C\+R\+E\+E\+N\+\_\+\+H\+E\+I\+G\+HT}}
+\index{S\+C\+R\+E\+E\+N\+\_\+\+H\+E\+I\+G\+HT@{S\+C\+R\+E\+E\+N\+\_\+\+H\+E\+I\+G\+HT}!game\+\_\+view.\+h@{game\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{S\+C\+R\+E\+E\+N\+\_\+\+H\+E\+I\+G\+HT}{SCREEN\_HEIGHT}}
+{\footnotesize\ttfamily \#define S\+C\+R\+E\+E\+N\+\_\+\+H\+E\+I\+G\+HT~600}
+
+
+
+Высота экрана. 
+
+\mbox{\Hypertarget{game__view_8h_a2cd109632a6dcccaa80b43561b1ab700}\label{game__view_8h_a2cd109632a6dcccaa80b43561b1ab700}} 
+\index{game\+\_\+view.\+h@{game\+\_\+view.\+h}!S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH@{S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH}}
+\index{S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH@{S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH}!game\+\_\+view.\+h@{game\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH}{SCREEN\_WIDTH}}
+{\footnotesize\ttfamily \#define S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH~800}
+
+
+
+Ширина экрана. 
+
+
+
+\subsection{Типы}
+\mbox{\Hypertarget{game__view_8h_a65989b0931b52a73cb13d10fd2ae77dd}\label{game__view_8h_a65989b0931b52a73cb13d10fd2ae77dd}} 
+\index{game\+\_\+view.\+h@{game\+\_\+view.\+h}!game\+\_\+view@{game\+\_\+view}}
+\index{game\+\_\+view@{game\+\_\+view}!game\+\_\+view.\+h@{game\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+view}{game\_view}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structgame__view}{game\+\_\+view} \hyperlink{structgame__view}{game\+\_\+view}}
+
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{game__view_8h_a5d31da96dc1fcded5af87b110ea1cd98}\label{game__view_8h_a5d31da96dc1fcded5af87b110ea1cd98}} 
+\index{game\+\_\+view.\+h@{game\+\_\+view.\+h}!game\+\_\+view\+\_\+create@{game\+\_\+view\+\_\+create}}
+\index{game\+\_\+view\+\_\+create@{game\+\_\+view\+\_\+create}!game\+\_\+view.\+h@{game\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+view\+\_\+create()}{game\_view\_create()}}
+{\footnotesize\ttfamily \hyperlink{structgame__view}{game\+\_\+view}$\ast$ game\+\_\+view\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Создание отображения игры. \begin{DoxyReturn}{Возвращает}
+Адрес, созданного отображения игры. ~\newline
+ N\+U\+LL, если во время создания отображения игры произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__view_8h_abc345bb97069dd789b670fe8f1f23a4d}\label{game__view_8h_abc345bb97069dd789b670fe8f1f23a4d}} 
+\index{game\+\_\+view.\+h@{game\+\_\+view.\+h}!game\+\_\+view\+\_\+destroy@{game\+\_\+view\+\_\+destroy}}
+\index{game\+\_\+view\+\_\+destroy@{game\+\_\+view\+\_\+destroy}!game\+\_\+view.\+h@{game\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+view\+\_\+destroy()}{game\_view\_destroy()}}
+{\footnotesize\ttfamily int game\+\_\+view\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{structgame__view}{game\+\_\+view} $\ast$}]{g\+\_\+view }\end{DoxyParamCaption})}
+
+Удаление отображения игры. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em g\+\_\+view} & -\/ адрес отображения игры, которое нужно удалить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если удаление прошло успешно. ~\newline
+ Ненулевое число, если во время удаления произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__view_8h_a58c54dcc496dca3fe69803f83b89a877}\label{game__view_8h_a58c54dcc496dca3fe69803f83b89a877}} 
+\index{game\+\_\+view.\+h@{game\+\_\+view.\+h}!game\+\_\+view\+\_\+start@{game\+\_\+view\+\_\+start}}
+\index{game\+\_\+view\+\_\+start@{game\+\_\+view\+\_\+start}!game\+\_\+view.\+h@{game\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+view\+\_\+start()}{game\_view\_start()}}
+{\footnotesize\ttfamily int game\+\_\+view\+\_\+start (\begin{DoxyParamCaption}\item[{\hyperlink{structgame__view}{game\+\_\+view} $\ast$}]{g\+\_\+view }\end{DoxyParamCaption})}
+
+Старт игры. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in,out}  & {\em g\+\_\+view} & -\/ адрес отображения игры, которую нужно начать. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если игра успешно закончилась. ~\newline
+ Ненулево число, если игра было преджевременно прекращена. 
+\end{DoxyReturn}

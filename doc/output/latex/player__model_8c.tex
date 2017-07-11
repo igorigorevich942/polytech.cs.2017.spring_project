@@ -1,0 +1,173 @@
+\hypertarget{player__model_8c}{}\section{Файл src/player\+\_\+model.c}
+\label{player__model_8c}\index{src/player\+\_\+model.\+c@{src/player\+\_\+model.\+c}}
+
+
+Файл, в котором реализованы функции для работы с моделью игрока.  
+
+
+{\ttfamily \#include \char`\"{}player\+\_\+model.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}error\+\_\+report.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Граф включаемых заголовочных файлов для player\+\_\+model.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{player__model_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{player__model_8c_ab117546549783a058d0321a287699579}{F\+I\+L\+E\+\_\+\+N\+A\+ME}~\char`\"{}player\+\_\+model.\+c\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущего файла. \end{DoxyCompactList}\item 
+\#define \hyperlink{player__model_8c_a6ebf6899d6c1c8b7b9d09be872c05aae}{E\+PS}~1e-\/15
+\begin{DoxyCompactList}\small\item\em Точность сравнения вещественных чисел. \end{DoxyCompactList}\item 
+\#define \hyperlink{player__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}player\+\_\+model\+\_\+create\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\item 
+\#define \hyperlink{player__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}player\+\_\+model\+\_\+update\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\item 
+\#define \hyperlink{player__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}player\+\_\+model\+\_\+destroy\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\item 
+\#define \hyperlink{player__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}{F\+U\+N\+\_\+\+N\+A\+ME}~\char`\"{}player\+\_\+model\+\_\+is\+\_\+end\char`\"{}
+\begin{DoxyCompactList}\small\item\em Имя текущей функции. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structplayer__model}{player\+\_\+model} $\ast$ \hyperlink{player__model_8c_ab8a395b12df2d231e0b2a4c36f686290}{player\+\_\+model\+\_\+create} ()
+\item 
+int \hyperlink{player__model_8c_a56743d09659282cdc60c27f16028036e}{player\+\_\+model\+\_\+update} (\hyperlink{structplayer__model}{player\+\_\+model} $\ast$p\+\_\+model, double speed)
+\item 
+int \hyperlink{player__model_8c_aab36afe2a7a3311da59ee784ecc7548f}{player\+\_\+model\+\_\+destroy} (\hyperlink{structplayer__model}{player\+\_\+model} $\ast$p\+\_\+model)
+\item 
+int \hyperlink{player__model_8c_a9014984955be35c6de7f854c5c439980}{player\+\_\+model\+\_\+is\+\_\+end} (\hyperlink{structplayer__model}{player\+\_\+model} $\ast$p\+\_\+model)
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Файл, в котором реализованы функции для работы с моделью игрока. 
+
+
+
+\subsection{Макросы}
+\mbox{\Hypertarget{player__model_8c_a6ebf6899d6c1c8b7b9d09be872c05aae}\label{player__model_8c_a6ebf6899d6c1c8b7b9d09be872c05aae}} 
+\index{player\+\_\+model.\+c@{player\+\_\+model.\+c}!E\+PS@{E\+PS}}
+\index{E\+PS@{E\+PS}!player\+\_\+model.\+c@{player\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{E\+PS}{EPS}}
+{\footnotesize\ttfamily \#define E\+PS~1e-\/15}
+
+
+
+Точность сравнения вещественных чисел. 
+
+\mbox{\Hypertarget{player__model_8c_ab117546549783a058d0321a287699579}\label{player__model_8c_ab117546549783a058d0321a287699579}} 
+\index{player\+\_\+model.\+c@{player\+\_\+model.\+c}!F\+I\+L\+E\+\_\+\+N\+A\+ME@{F\+I\+L\+E\+\_\+\+N\+A\+ME}}
+\index{F\+I\+L\+E\+\_\+\+N\+A\+ME@{F\+I\+L\+E\+\_\+\+N\+A\+ME}!player\+\_\+model.\+c@{player\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+I\+L\+E\+\_\+\+N\+A\+ME}{FILE\_NAME}}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+N\+A\+ME~\char`\"{}player\+\_\+model.\+c\char`\"{}}
+
+
+
+Имя текущего файла. 
+
+\mbox{\Hypertarget{player__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{player__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{player\+\_\+model.\+c@{player\+\_\+model.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!player\+\_\+model.\+c@{player\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}player\+\_\+model\+\_\+create\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{player__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{player__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{player\+\_\+model.\+c@{player\+\_\+model.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!player\+\_\+model.\+c@{player\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}player\+\_\+model\+\_\+update\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{player__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{player__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{player\+\_\+model.\+c@{player\+\_\+model.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!player\+\_\+model.\+c@{player\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}player\+\_\+model\+\_\+destroy\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+\mbox{\Hypertarget{player__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}\label{player__model_8c_aba64ab31ac50908f7aa4125955fcf2ed}} 
+\index{player\+\_\+model.\+c@{player\+\_\+model.\+c}!F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}}
+\index{F\+U\+N\+\_\+\+N\+A\+ME@{F\+U\+N\+\_\+\+N\+A\+ME}!player\+\_\+model.\+c@{player\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{F\+U\+N\+\_\+\+N\+A\+ME}{FUN\_NAME}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+\_\+\+N\+A\+ME~\char`\"{}player\+\_\+model\+\_\+is\+\_\+end\char`\"{}}
+
+
+
+Имя текущей функции. 
+
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{player__model_8c_ab8a395b12df2d231e0b2a4c36f686290}\label{player__model_8c_ab8a395b12df2d231e0b2a4c36f686290}} 
+\index{player\+\_\+model.\+c@{player\+\_\+model.\+c}!player\+\_\+model\+\_\+create@{player\+\_\+model\+\_\+create}}
+\index{player\+\_\+model\+\_\+create@{player\+\_\+model\+\_\+create}!player\+\_\+model.\+c@{player\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+model\+\_\+create()}{player\_model\_create()}}
+{\footnotesize\ttfamily \hyperlink{structplayer__model}{player\+\_\+model}$\ast$ player\+\_\+model\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Создание модели игрока. \begin{DoxyReturn}{Возвращает}
+Адрес, созданной модели. ~\newline
+ N\+U\+LL, если во время создания модели произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player__model_8c_aab36afe2a7a3311da59ee784ecc7548f}\label{player__model_8c_aab36afe2a7a3311da59ee784ecc7548f}} 
+\index{player\+\_\+model.\+c@{player\+\_\+model.\+c}!player\+\_\+model\+\_\+destroy@{player\+\_\+model\+\_\+destroy}}
+\index{player\+\_\+model\+\_\+destroy@{player\+\_\+model\+\_\+destroy}!player\+\_\+model.\+c@{player\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+model\+\_\+destroy()}{player\_model\_destroy()}}
+{\footnotesize\ttfamily int player\+\_\+model\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{structplayer__model}{player\+\_\+model} $\ast$}]{p\+\_\+model }\end{DoxyParamCaption})}
+
+Удаление модели игрока. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in,out}  & {\em p\+\_\+model} & -\/ адрес модели игрока, которую необходимо удалить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если удаление прошло успешно. ~\newline
+ Ненулевое число, если во время удаления произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player__model_8c_a9014984955be35c6de7f854c5c439980}\label{player__model_8c_a9014984955be35c6de7f854c5c439980}} 
+\index{player\+\_\+model.\+c@{player\+\_\+model.\+c}!player\+\_\+model\+\_\+is\+\_\+end@{player\+\_\+model\+\_\+is\+\_\+end}}
+\index{player\+\_\+model\+\_\+is\+\_\+end@{player\+\_\+model\+\_\+is\+\_\+end}!player\+\_\+model.\+c@{player\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+model\+\_\+is\+\_\+end()}{player\_model\_is\_end()}}
+{\footnotesize\ttfamily int player\+\_\+model\+\_\+is\+\_\+end (\begin{DoxyParamCaption}\item[{\hyperlink{structplayer__model}{player\+\_\+model} $\ast$}]{p\+\_\+model }\end{DoxyParamCaption})}
+
+Проверка прохождения игроком всей дистанции. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em p\+\_\+model} & -\/ адрес модели игрока, данные которой небходимо проверить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Отрицательное число, если во время проверки произошла ошибка. ~\newline
+ Ноль, если игрок не прошел дистанцию. ~\newline
+ Положительное число, если игрок прошел дистанцию. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player__model_8c_a56743d09659282cdc60c27f16028036e}\label{player__model_8c_a56743d09659282cdc60c27f16028036e}} 
+\index{player\+\_\+model.\+c@{player\+\_\+model.\+c}!player\+\_\+model\+\_\+update@{player\+\_\+model\+\_\+update}}
+\index{player\+\_\+model\+\_\+update@{player\+\_\+model\+\_\+update}!player\+\_\+model.\+c@{player\+\_\+model.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+model\+\_\+update()}{player\_model\_update()}}
+{\footnotesize\ttfamily int player\+\_\+model\+\_\+update (\begin{DoxyParamCaption}\item[{\hyperlink{structplayer__model}{player\+\_\+model} $\ast$}]{p\+\_\+model,  }\item[{double}]{speed }\end{DoxyParamCaption})}
+
+Обновление данных модели игрока. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in,out}  & {\em p\+\_\+model} & -\/ адрес модели игрока, которую необходимо обновить. \\
+\hline
+\mbox{\tt in}  & {\em speed} & -\/ текущая скорость игрока. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если обновление прошло успешно. ~\newline
+ Ненулевое число, если во время обновления произошла ошибка. 
+\end{DoxyReturn}

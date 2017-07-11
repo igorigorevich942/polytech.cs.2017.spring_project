@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Race game: Исходный файл src/game_view.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Race game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('game__view_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">game_view.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="game__view_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GAME_VIEW_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GAME_VIEW_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="game__model_8h.html">game_model.h</a>&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="field__view_8h.html">field_view.h</a>&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="timer__view_8h.html">timer_view.h</a>&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;allegro5/allegro.h&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="game__view_8h.html#ac92ca5ab87034a348decad7ee8d4bd1b">   15</a></span>&#160;<span class="preprocessor">#define FPS 60 </span></div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="game__view_8h.html#a2cd109632a6dcccaa80b43561b1ab700">   16</a></span>&#160;<span class="preprocessor">#define SCREEN_WIDTH 800 </span></div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="game__view_8h.html#a6974d08a74da681b3957b2fead2608b8">   17</a></span>&#160;<span class="preprocessor">#define SCREEN_HEIGHT 600 </span></div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="game__view_8h.html#a1c621d1e6010992bc7f6f9f0472495cc">   18</a></span>&#160;<span class="preprocessor">#define GAME_V_BACKGROUND al_map_rgb(255, 255, 255) </span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"></span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structgame__view.html">   23</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structgame__view.html">game_view</a> {</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structgame__view.html#a09b15cc54d9bc6ea5e6d67bd27639b47">   24</a></span>&#160;    <a class="code" href="structgame__model.html">game_model</a>* <a class="code" href="structgame__view.html#a09b15cc54d9bc6ea5e6d67bd27639b47">g_model</a>; </div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structgame__view.html#a0490cc44940b39d3be15cb3d543988f2">   25</a></span>&#160;    <a class="code" href="structtimer__view.html">timer_view</a>* <a class="code" href="structgame__view.html#a0490cc44940b39d3be15cb3d543988f2">t_view</a>;  </div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structgame__view.html#a1a070c6c14bf9c04398b2aab5609ec81">   26</a></span>&#160;    <a class="code" href="structfield__view.html">field_view</a>* <a class="code" href="structgame__view.html#a1a070c6c14bf9c04398b2aab5609ec81">f_view</a>;  </div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structgame__view.html#ae9721ac01fbc40ea44587bca447a71d3">   28</a></span>&#160;    ALLEGRO_DISPLAY* <a class="code" href="structgame__view.html#ae9721ac01fbc40ea44587bca447a71d3">display</a>;         </div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structgame__view.html#a2329d90e0f5234304cc7039e94e9ce33">   29</a></span>&#160;    ALLEGRO_EVENT_QUEUE* <a class="code" href="structgame__view.html#a2329d90e0f5234304cc7039e94e9ce33">event_queue</a>; </div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structgame__view.html#a331f2383ff30abbee83ed4765cce229a">   30</a></span>&#160;    ALLEGRO_TIMER* <a class="code" href="structgame__view.html#a331f2383ff30abbee83ed4765cce229a">timer</a>;             </div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}; </div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="game__view_8h.html#a65989b0931b52a73cb13d10fd2ae77dd">   33</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structgame__view.html">game_view</a> <a class="code" href="structgame__view.html">game_view</a>;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<a class="code" href="structgame__view.html">game_view</a>* <a class="code" href="game__view_8h.html#a5d31da96dc1fcded5af87b110ea1cd98">game_view_create</a>();</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">int</span> <a class="code" href="game__view_8h.html#a58c54dcc496dca3fe69803f83b89a877">game_view_start</a>(<a class="code" href="structgame__view.html">game_view</a>* g_view);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">int</span> <a class="code" href="game__view_8h.html#abc345bb97069dd789b670fe8f1f23a4d">game_view_destroy</a>(<a class="code" href="structgame__view.html">game_view</a>* g_view);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif // GAME_VIEW_H</span></div><div class="ttc" id="structgame__model_html"><div class="ttname"><a href="structgame__model.html">game_model</a></div><div class="ttdoc">Структура, которая описывает модель игры. </div><div class="ttdef"><b>Definition:</b> game_model.h:29</div></div>
+<div class="ttc" id="field__view_8h_html"><div class="ttname"><a href="field__view_8h.html">field_view.h</a></div><div class="ttdoc">Файл, в котором опеределены функции для работы с отображением игрового поля. </div></div>
+<div class="ttc" id="structgame__view_html_a09b15cc54d9bc6ea5e6d67bd27639b47"><div class="ttname"><a href="structgame__view.html#a09b15cc54d9bc6ea5e6d67bd27639b47">game_view::g_model</a></div><div class="ttdeci">game_model * g_model</div><div class="ttdoc">Модель игры. </div><div class="ttdef"><b>Definition:</b> game_view.h:24</div></div>
+<div class="ttc" id="game__model_8h_html"><div class="ttname"><a href="game__model_8h.html">game_model.h</a></div><div class="ttdoc">Файл, в котором опеределены функции для работы с моделью игры. </div></div>
+<div class="ttc" id="game__view_8h_html_a5d31da96dc1fcded5af87b110ea1cd98"><div class="ttname"><a href="game__view_8h.html#a5d31da96dc1fcded5af87b110ea1cd98">game_view_create</a></div><div class="ttdeci">game_view * game_view_create()</div><div class="ttdef"><b>Definition:</b> game_view.c:88</div></div>
+<div class="ttc" id="structgame__view_html_a331f2383ff30abbee83ed4765cce229a"><div class="ttname"><a href="structgame__view.html#a331f2383ff30abbee83ed4765cce229a">game_view::timer</a></div><div class="ttdeci">ALLEGRO_TIMER * timer</div><div class="ttdoc">Адрес таймера ALLEGRO. </div><div class="ttdef"><b>Definition:</b> game_view.h:30</div></div>
+<div class="ttc" id="structgame__view_html"><div class="ttname"><a href="structgame__view.html">game_view</a></div><div class="ttdoc">Структура, которая описывает отображение игры. </div><div class="ttdef"><b>Definition:</b> game_view.h:23</div></div>
+<div class="ttc" id="structfield__view_html"><div class="ttname"><a href="structfield__view.html">field_view</a></div><div class="ttdoc">Структура, которая описывает отображение игрового поля. </div><div class="ttdef"><b>Definition:</b> field_view.h:23</div></div>
+<div class="ttc" id="structgame__view_html_ae9721ac01fbc40ea44587bca447a71d3"><div class="ttname"><a href="structgame__view.html#ae9721ac01fbc40ea44587bca447a71d3">game_view::display</a></div><div class="ttdeci">ALLEGRO_DISPLAY * display</div><div class="ttdoc">Адрес дисплея. </div><div class="ttdef"><b>Definition:</b> game_view.h:28</div></div>
+<div class="ttc" id="structgame__view_html_a1a070c6c14bf9c04398b2aab5609ec81"><div class="ttname"><a href="structgame__view.html#a1a070c6c14bf9c04398b2aab5609ec81">game_view::f_view</a></div><div class="ttdeci">field_view * f_view</div><div class="ttdoc">Отображение поля игры. </div><div class="ttdef"><b>Definition:</b> game_view.h:26</div></div>
+<div class="ttc" id="game__view_8h_html_abc345bb97069dd789b670fe8f1f23a4d"><div class="ttname"><a href="game__view_8h.html#abc345bb97069dd789b670fe8f1f23a4d">game_view_destroy</a></div><div class="ttdeci">int game_view_destroy(game_view *g_view)</div><div class="ttdef"><b>Definition:</b> game_view.c:177</div></div>
+<div class="ttc" id="structgame__view_html_a2329d90e0f5234304cc7039e94e9ce33"><div class="ttname"><a href="structgame__view.html#a2329d90e0f5234304cc7039e94e9ce33">game_view::event_queue</a></div><div class="ttdeci">ALLEGRO_EVENT_QUEUE * event_queue</div><div class="ttdoc">Адрес очереди событий. </div><div class="ttdef"><b>Definition:</b> game_view.h:29</div></div>
+<div class="ttc" id="timer__view_8h_html"><div class="ttname"><a href="timer__view_8h.html">timer_view.h</a></div><div class="ttdoc">Файл, в котором опеределены функции для работы с отображением таймеров. </div></div>
+<div class="ttc" id="structtimer__view_html"><div class="ttname"><a href="structtimer__view.html">timer_view</a></div><div class="ttdoc">Структура, которая описывает отображение таймеров. </div><div class="ttdef"><b>Definition:</b> timer_view.h:22</div></div>
+<div class="ttc" id="structgame__view_html_a0490cc44940b39d3be15cb3d543988f2"><div class="ttname"><a href="structgame__view.html#a0490cc44940b39d3be15cb3d543988f2">game_view::t_view</a></div><div class="ttdeci">timer_view * t_view</div><div class="ttdoc">Отображение таймеров. </div><div class="ttdef"><b>Definition:</b> game_view.h:25</div></div>
+<div class="ttc" id="game__view_8h_html_a58c54dcc496dca3fe69803f83b89a877"><div class="ttname"><a href="game__view_8h.html#a58c54dcc496dca3fe69803f83b89a877">game_view_start</a></div><div class="ttdeci">int game_view_start(game_view *g_view)</div><div class="ttdef"><b>Definition:</b> game_view.c:142</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="game__view_8h.html">game_view.h</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

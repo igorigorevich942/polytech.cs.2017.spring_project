@@ -1,0 +1,6 @@
+<map id="src/rectangle_view.h" name="src/rectangle_view.h">
+<area shape="rect" id="node2" href="$field__view_8c.html" title="Файл, в котором реализованы функции для работы с отображением игрового поля. " alt="" coords="5,80,128,107"/>
+<area shape="rect" id="node3" href="$label__view_8c.html" title="Файл, в котором реализованы функции для работы с элементом интерфейса: &quot;надпись&quot;. ..." alt="" coords="153,80,279,107"/>
+<area shape="rect" id="node4" href="$player__view_8c.html" title="src/player_view.c" alt="" coords="303,80,438,107"/>
+<area shape="rect" id="node5" href="$rectangle__view_8c.html" title="Файл, в котором реализованы функции для работы с элементом интерфейса: &quot;прямоугольник&quot;. " alt="" coords="463,80,617,107"/>
+</map>
