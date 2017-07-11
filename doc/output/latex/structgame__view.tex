@@ -1,0 +1,106 @@
+\hypertarget{structgame__view}{}\section{Структура game\+\_\+view}
+\label{structgame__view}\index{game\+\_\+view@{game\+\_\+view}}
+
+
+Структура, которая описывает отображение игры.  
+
+
+
+
+{\ttfamily \#include $<$game\+\_\+view.\+h$>$}
+
+
+
+Граф связей класса game\+\_\+view\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structgame__view__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Поля данных}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structgame__model}{game\+\_\+model} $\ast$ \hyperlink{structgame__view_a09b15cc54d9bc6ea5e6d67bd27639b47}{g\+\_\+model}
+\begin{DoxyCompactList}\small\item\em Модель игры. \end{DoxyCompactList}\item 
+\hyperlink{structtimer__view}{timer\+\_\+view} $\ast$ \hyperlink{structgame__view_a0490cc44940b39d3be15cb3d543988f2}{t\+\_\+view}
+\begin{DoxyCompactList}\small\item\em Отображение таймеров. \end{DoxyCompactList}\item 
+\hyperlink{structfield__view}{field\+\_\+view} $\ast$ \hyperlink{structgame__view_a1a070c6c14bf9c04398b2aab5609ec81}{f\+\_\+view}
+\begin{DoxyCompactList}\small\item\em Отображение поля игры. \end{DoxyCompactList}\item 
+A\+L\+L\+E\+G\+R\+O\+\_\+\+D\+I\+S\+P\+L\+AY $\ast$ \hyperlink{structgame__view_ae9721ac01fbc40ea44587bca447a71d3}{display}
+\begin{DoxyCompactList}\small\item\em Адрес дисплея. \end{DoxyCompactList}\item 
+A\+L\+L\+E\+G\+R\+O\+\_\+\+E\+V\+E\+N\+T\+\_\+\+Q\+U\+E\+UE $\ast$ \hyperlink{structgame__view_a2329d90e0f5234304cc7039e94e9ce33}{event\+\_\+queue}
+\begin{DoxyCompactList}\small\item\em Адрес очереди событий. \end{DoxyCompactList}\item 
+A\+L\+L\+E\+G\+R\+O\+\_\+\+T\+I\+M\+ER $\ast$ \hyperlink{structgame__view_a331f2383ff30abbee83ed4765cce229a}{timer}
+\begin{DoxyCompactList}\small\item\em Адрес таймера A\+L\+L\+E\+G\+RO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Структура, которая описывает отображение игры. 
+
+\subsection{Поля}
+\mbox{\Hypertarget{structgame__view_ae9721ac01fbc40ea44587bca447a71d3}\label{structgame__view_ae9721ac01fbc40ea44587bca447a71d3}} 
+\index{game\+\_\+view@{game\+\_\+view}!display@{display}}
+\index{display@{display}!game\+\_\+view@{game\+\_\+view}}
+\subsubsection{\texorpdfstring{display}{display}}
+{\footnotesize\ttfamily A\+L\+L\+E\+G\+R\+O\+\_\+\+D\+I\+S\+P\+L\+AY$\ast$ game\+\_\+view\+::display}
+
+
+
+Адрес дисплея. 
+
+\mbox{\Hypertarget{structgame__view_a2329d90e0f5234304cc7039e94e9ce33}\label{structgame__view_a2329d90e0f5234304cc7039e94e9ce33}} 
+\index{game\+\_\+view@{game\+\_\+view}!event\+\_\+queue@{event\+\_\+queue}}
+\index{event\+\_\+queue@{event\+\_\+queue}!game\+\_\+view@{game\+\_\+view}}
+\subsubsection{\texorpdfstring{event\+\_\+queue}{event\_queue}}
+{\footnotesize\ttfamily A\+L\+L\+E\+G\+R\+O\+\_\+\+E\+V\+E\+N\+T\+\_\+\+Q\+U\+E\+UE$\ast$ game\+\_\+view\+::event\+\_\+queue}
+
+
+
+Адрес очереди событий. 
+
+\mbox{\Hypertarget{structgame__view_a1a070c6c14bf9c04398b2aab5609ec81}\label{structgame__view_a1a070c6c14bf9c04398b2aab5609ec81}} 
+\index{game\+\_\+view@{game\+\_\+view}!f\+\_\+view@{f\+\_\+view}}
+\index{f\+\_\+view@{f\+\_\+view}!game\+\_\+view@{game\+\_\+view}}
+\subsubsection{\texorpdfstring{f\+\_\+view}{f\_view}}
+{\footnotesize\ttfamily \hyperlink{structfield__view}{field\+\_\+view}$\ast$ game\+\_\+view\+::f\+\_\+view}
+
+
+
+Отображение поля игры. 
+
+\mbox{\Hypertarget{structgame__view_a09b15cc54d9bc6ea5e6d67bd27639b47}\label{structgame__view_a09b15cc54d9bc6ea5e6d67bd27639b47}} 
+\index{game\+\_\+view@{game\+\_\+view}!g\+\_\+model@{g\+\_\+model}}
+\index{g\+\_\+model@{g\+\_\+model}!game\+\_\+view@{game\+\_\+view}}
+\subsubsection{\texorpdfstring{g\+\_\+model}{g\_model}}
+{\footnotesize\ttfamily \hyperlink{structgame__model}{game\+\_\+model}$\ast$ game\+\_\+view\+::g\+\_\+model}
+
+
+
+Модель игры. 
+
+\mbox{\Hypertarget{structgame__view_a0490cc44940b39d3be15cb3d543988f2}\label{structgame__view_a0490cc44940b39d3be15cb3d543988f2}} 
+\index{game\+\_\+view@{game\+\_\+view}!t\+\_\+view@{t\+\_\+view}}
+\index{t\+\_\+view@{t\+\_\+view}!game\+\_\+view@{game\+\_\+view}}
+\subsubsection{\texorpdfstring{t\+\_\+view}{t\_view}}
+{\footnotesize\ttfamily \hyperlink{structtimer__view}{timer\+\_\+view}$\ast$ game\+\_\+view\+::t\+\_\+view}
+
+
+
+Отображение таймеров. 
+
+\mbox{\Hypertarget{structgame__view_a331f2383ff30abbee83ed4765cce229a}\label{structgame__view_a331f2383ff30abbee83ed4765cce229a}} 
+\index{game\+\_\+view@{game\+\_\+view}!timer@{timer}}
+\index{timer@{timer}!game\+\_\+view@{game\+\_\+view}}
+\subsubsection{\texorpdfstring{timer}{timer}}
+{\footnotesize\ttfamily A\+L\+L\+E\+G\+R\+O\+\_\+\+T\+I\+M\+ER$\ast$ game\+\_\+view\+::timer}
+
+
+
+Адрес таймера A\+L\+L\+E\+G\+RO. 
+
+
+
+Объявления и описания членов структуры находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{game__view_8h}{game\+\_\+view.\+h}\end{DoxyCompactItemize}
