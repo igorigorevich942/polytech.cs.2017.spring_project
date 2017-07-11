@@ -1,0 +1,140 @@
+\hypertarget{player__model_8h}{}\section{Файл src/player\+\_\+model.h}
+\label{player__model_8h}\index{src/player\+\_\+model.\+h@{src/player\+\_\+model.\+h}}
+
+
+Файл, в котором опеределены функции для работы с моделью игрока.  
+
+
+Граф файлов, в которые включается этот файл\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{player__model_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structplayer__model}{player\+\_\+model}
+\begin{DoxyCompactList}\small\item\em Структура, которая описывает модель игрока. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{player__model_8h_a48e09d724ad8d412d3b973902199d372}{D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+L\+E\+N\+G\+TH}~1000
+\begin{DoxyCompactList}\small\item\em Дистанция, которую должен пройти игрок. \end{DoxyCompactList}\item 
+\#define \hyperlink{player__model_8h_ac2cd96d53dd3ba6407db6766c3d92b26}{M\+A\+X\+\_\+\+S\+P\+E\+ED}~1000
+\begin{DoxyCompactList}\small\item\em Максимальная скорость игрока. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structplayer__model}{player\+\_\+model} \hyperlink{player__model_8h_a2fe32cb1845e33e3d98460f114486323}{player\+\_\+model}
+\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structplayer__model}{player\+\_\+model} $\ast$ \hyperlink{player__model_8h_ab8a395b12df2d231e0b2a4c36f686290}{player\+\_\+model\+\_\+create} ()
+\item 
+int \hyperlink{player__model_8h_a56743d09659282cdc60c27f16028036e}{player\+\_\+model\+\_\+update} (\hyperlink{structplayer__model}{player\+\_\+model} $\ast$p\+\_\+model, double speed)
+\item 
+int \hyperlink{player__model_8h_aab36afe2a7a3311da59ee784ecc7548f}{player\+\_\+model\+\_\+destroy} (\hyperlink{structplayer__model}{player\+\_\+model} $\ast$p\+\_\+model)
+\item 
+int \hyperlink{player__model_8h_a9014984955be35c6de7f854c5c439980}{player\+\_\+model\+\_\+is\+\_\+end} (\hyperlink{structplayer__model}{player\+\_\+model} $\ast$p\+\_\+model)
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Файл, в котором опеределены функции для работы с моделью игрока. 
+
+
+
+\subsection{Макросы}
+\mbox{\Hypertarget{player__model_8h_a48e09d724ad8d412d3b973902199d372}\label{player__model_8h_a48e09d724ad8d412d3b973902199d372}} 
+\index{player\+\_\+model.\+h@{player\+\_\+model.\+h}!D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+L\+E\+N\+G\+TH@{D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+L\+E\+N\+G\+TH}}
+\index{D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+L\+E\+N\+G\+TH@{D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+L\+E\+N\+G\+TH}!player\+\_\+model.\+h@{player\+\_\+model.\+h}}
+\subsubsection{\texorpdfstring{D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+L\+E\+N\+G\+TH}{DISTANCE\_LENGTH}}
+{\footnotesize\ttfamily \#define D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+L\+E\+N\+G\+TH~1000}
+
+
+
+Дистанция, которую должен пройти игрок. 
+
+\mbox{\Hypertarget{player__model_8h_ac2cd96d53dd3ba6407db6766c3d92b26}\label{player__model_8h_ac2cd96d53dd3ba6407db6766c3d92b26}} 
+\index{player\+\_\+model.\+h@{player\+\_\+model.\+h}!M\+A\+X\+\_\+\+S\+P\+E\+ED@{M\+A\+X\+\_\+\+S\+P\+E\+ED}}
+\index{M\+A\+X\+\_\+\+S\+P\+E\+ED@{M\+A\+X\+\_\+\+S\+P\+E\+ED}!player\+\_\+model.\+h@{player\+\_\+model.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+S\+P\+E\+ED}{MAX\_SPEED}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+S\+P\+E\+ED~1000}
+
+
+
+Максимальная скорость игрока. 
+
+
+
+\subsection{Типы}
+\mbox{\Hypertarget{player__model_8h_a2fe32cb1845e33e3d98460f114486323}\label{player__model_8h_a2fe32cb1845e33e3d98460f114486323}} 
+\index{player\+\_\+model.\+h@{player\+\_\+model.\+h}!player\+\_\+model@{player\+\_\+model}}
+\index{player\+\_\+model@{player\+\_\+model}!player\+\_\+model.\+h@{player\+\_\+model.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+model}{player\_model}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structplayer__model}{player\+\_\+model} \hyperlink{structplayer__model}{player\+\_\+model}}
+
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{player__model_8h_ab8a395b12df2d231e0b2a4c36f686290}\label{player__model_8h_ab8a395b12df2d231e0b2a4c36f686290}} 
+\index{player\+\_\+model.\+h@{player\+\_\+model.\+h}!player\+\_\+model\+\_\+create@{player\+\_\+model\+\_\+create}}
+\index{player\+\_\+model\+\_\+create@{player\+\_\+model\+\_\+create}!player\+\_\+model.\+h@{player\+\_\+model.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+model\+\_\+create()}{player\_model\_create()}}
+{\footnotesize\ttfamily \hyperlink{structplayer__model}{player\+\_\+model}$\ast$ player\+\_\+model\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Создание модели игрока. \begin{DoxyReturn}{Возвращает}
+Адрес, созданной модели. ~\newline
+ N\+U\+LL, если во время создания модели произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player__model_8h_aab36afe2a7a3311da59ee784ecc7548f}\label{player__model_8h_aab36afe2a7a3311da59ee784ecc7548f}} 
+\index{player\+\_\+model.\+h@{player\+\_\+model.\+h}!player\+\_\+model\+\_\+destroy@{player\+\_\+model\+\_\+destroy}}
+\index{player\+\_\+model\+\_\+destroy@{player\+\_\+model\+\_\+destroy}!player\+\_\+model.\+h@{player\+\_\+model.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+model\+\_\+destroy()}{player\_model\_destroy()}}
+{\footnotesize\ttfamily int player\+\_\+model\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{structplayer__model}{player\+\_\+model} $\ast$}]{p\+\_\+model }\end{DoxyParamCaption})}
+
+Удаление модели игрока. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in,out}  & {\em p\+\_\+model} & -\/ адрес модели игрока, которую необходимо удалить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если удаление прошло успешно. ~\newline
+ Ненулевое число, если во время удаления произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player__model_8h_a9014984955be35c6de7f854c5c439980}\label{player__model_8h_a9014984955be35c6de7f854c5c439980}} 
+\index{player\+\_\+model.\+h@{player\+\_\+model.\+h}!player\+\_\+model\+\_\+is\+\_\+end@{player\+\_\+model\+\_\+is\+\_\+end}}
+\index{player\+\_\+model\+\_\+is\+\_\+end@{player\+\_\+model\+\_\+is\+\_\+end}!player\+\_\+model.\+h@{player\+\_\+model.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+model\+\_\+is\+\_\+end()}{player\_model\_is\_end()}}
+{\footnotesize\ttfamily int player\+\_\+model\+\_\+is\+\_\+end (\begin{DoxyParamCaption}\item[{\hyperlink{structplayer__model}{player\+\_\+model} $\ast$}]{p\+\_\+model }\end{DoxyParamCaption})}
+
+Проверка прохождения игроком всей дистанции. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em p\+\_\+model} & -\/ адрес модели игрока, данные которой небходимо проверить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Отрицательное число, если во время проверки произошла ошибка. ~\newline
+ Ноль, если игрок не прошел дистанцию. ~\newline
+ Положительное число, если игрок прошел дистанцию. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player__model_8h_a56743d09659282cdc60c27f16028036e}\label{player__model_8h_a56743d09659282cdc60c27f16028036e}} 
+\index{player\+\_\+model.\+h@{player\+\_\+model.\+h}!player\+\_\+model\+\_\+update@{player\+\_\+model\+\_\+update}}
+\index{player\+\_\+model\+\_\+update@{player\+\_\+model\+\_\+update}!player\+\_\+model.\+h@{player\+\_\+model.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+model\+\_\+update()}{player\_model\_update()}}
+{\footnotesize\ttfamily int player\+\_\+model\+\_\+update (\begin{DoxyParamCaption}\item[{\hyperlink{structplayer__model}{player\+\_\+model} $\ast$}]{p\+\_\+model,  }\item[{double}]{speed }\end{DoxyParamCaption})}
+
+Обновление данных модели игрока. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in,out}  & {\em p\+\_\+model} & -\/ адрес модели игрока, которую необходимо обновить. \\
+\hline
+\mbox{\tt in}  & {\em speed} & -\/ текущая скорость игрока. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если обновление прошло успешно. ~\newline
+ Ненулевое число, если во время обновления произошла ошибка. 
+\end{DoxyReturn}

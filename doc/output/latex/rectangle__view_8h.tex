@@ -1,0 +1,92 @@
+\hypertarget{rectangle__view_8h}{}\section{Файл src/rectangle\+\_\+view.h}
+\label{rectangle__view_8h}\index{src/rectangle\+\_\+view.\+h@{src/rectangle\+\_\+view.\+h}}
+
+
+Файл, в котором опеределены функции для работы с элементом интерфейса\+: \char`\"{}прямоугольник\char`\"{}.  
+
+
+{\ttfamily \#include $<$allegro5/allegro.\+h$>$}\newline
+Граф включаемых заголовочных файлов для rectangle\+\_\+view.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{rectangle__view_8h__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rectangle__view_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+A\+L\+L\+E\+G\+R\+O\+\_\+\+B\+I\+T\+M\+AP $\ast$ \hyperlink{rectangle__view_8h_a31aa7ce2b4597a3b54945c36643c0e95}{rectangle\+\_\+view\+\_\+create} (A\+L\+L\+E\+G\+R\+O\+\_\+\+C\+O\+L\+OR color, unsigned int width, unsigned int height)
+\item 
+int \hyperlink{rectangle__view_8h_a5f254db4555257c9ed8562c4a2218539}{rectangle\+\_\+view\+\_\+draw} (A\+L\+L\+E\+G\+R\+O\+\_\+\+B\+I\+T\+M\+AP $\ast$r\+\_\+view, unsigned int x, unsigned int y)
+\item 
+int \hyperlink{rectangle__view_8h_a7cda47d97264b19f8529cac366da339f}{rectangle\+\_\+view\+\_\+destroy} (A\+L\+L\+E\+G\+R\+O\+\_\+\+B\+I\+T\+M\+AP $\ast$r\+\_\+view)
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Файл, в котором опеределены функции для работы с элементом интерфейса\+: \char`\"{}прямоугольник\char`\"{}. 
+
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{rectangle__view_8h_a31aa7ce2b4597a3b54945c36643c0e95}\label{rectangle__view_8h_a31aa7ce2b4597a3b54945c36643c0e95}} 
+\index{rectangle\+\_\+view.\+h@{rectangle\+\_\+view.\+h}!rectangle\+\_\+view\+\_\+create@{rectangle\+\_\+view\+\_\+create}}
+\index{rectangle\+\_\+view\+\_\+create@{rectangle\+\_\+view\+\_\+create}!rectangle\+\_\+view.\+h@{rectangle\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{rectangle\+\_\+view\+\_\+create()}{rectangle\_view\_create()}}
+{\footnotesize\ttfamily A\+L\+L\+E\+G\+R\+O\+\_\+\+B\+I\+T\+M\+AP$\ast$ rectangle\+\_\+view\+\_\+create (\begin{DoxyParamCaption}\item[{A\+L\+L\+E\+G\+R\+O\+\_\+\+C\+O\+L\+OR}]{color,  }\item[{unsigned int}]{width,  }\item[{unsigned int}]{height }\end{DoxyParamCaption})}
+
+Создание прямоугольника. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em color} & -\/ цвет. \\
+\hline
+\mbox{\tt in}  & {\em width} & -\/ ширина. \\
+\hline
+\mbox{\tt in}  & {\em height} & -\/ высота. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Адрес, созданного прямоугольника. ~\newline
+ N\+U\+LL, если во время создания прямоугольника произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rectangle__view_8h_a7cda47d97264b19f8529cac366da339f}\label{rectangle__view_8h_a7cda47d97264b19f8529cac366da339f}} 
+\index{rectangle\+\_\+view.\+h@{rectangle\+\_\+view.\+h}!rectangle\+\_\+view\+\_\+destroy@{rectangle\+\_\+view\+\_\+destroy}}
+\index{rectangle\+\_\+view\+\_\+destroy@{rectangle\+\_\+view\+\_\+destroy}!rectangle\+\_\+view.\+h@{rectangle\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{rectangle\+\_\+view\+\_\+destroy()}{rectangle\_view\_destroy()}}
+{\footnotesize\ttfamily int rectangle\+\_\+view\+\_\+destroy (\begin{DoxyParamCaption}\item[{A\+L\+L\+E\+G\+R\+O\+\_\+\+B\+I\+T\+M\+AP $\ast$}]{r\+\_\+view }\end{DoxyParamCaption})}
+
+Удаление прямоугольника. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em r\+\_\+view} & -\/ адрес прямоугольника, который нужно удалить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если удаление прошло успешно. ~\newline
+ Ненулевое число, если во время удаления произошла ошибка. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rectangle__view_8h_a5f254db4555257c9ed8562c4a2218539}\label{rectangle__view_8h_a5f254db4555257c9ed8562c4a2218539}} 
+\index{rectangle\+\_\+view.\+h@{rectangle\+\_\+view.\+h}!rectangle\+\_\+view\+\_\+draw@{rectangle\+\_\+view\+\_\+draw}}
+\index{rectangle\+\_\+view\+\_\+draw@{rectangle\+\_\+view\+\_\+draw}!rectangle\+\_\+view.\+h@{rectangle\+\_\+view.\+h}}
+\subsubsection{\texorpdfstring{rectangle\+\_\+view\+\_\+draw()}{rectangle\_view\_draw()}}
+{\footnotesize\ttfamily int rectangle\+\_\+view\+\_\+draw (\begin{DoxyParamCaption}\item[{A\+L\+L\+E\+G\+R\+O\+\_\+\+B\+I\+T\+M\+AP $\ast$}]{r\+\_\+view,  }\item[{unsigned int}]{x,  }\item[{unsigned int}]{y }\end{DoxyParamCaption})}
+
+Рисование треугольника. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em r\+\_\+view} & -\/ адрес прямоугольника, который нужно нарисовать. \\
+\hline
+\mbox{\tt in}  & {\em x} & -\/ координата рисования верхнего левого угла прямоугольника по оси OX. \\
+\hline
+\mbox{\tt in}  & {\em y} & -\/ координата рисования верхнего левого угла прямоугольника по оси OY. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ноль, если прямоугольник был успешно отрисован. ~\newline
+ Ненулевое число, если во время рисования произошла ошибка. 
+\end{DoxyReturn}
