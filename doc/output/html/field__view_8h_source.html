@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Race game: Исходный файл src/field_view.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Race game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('field__view_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">field_view.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="field__view_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef FIELD_VIEW_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define FIELD_VIEW_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="player__model_8h.html">player_model.h</a>&quot;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="player__view_8h.html">player_view.h</a>&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="label__view_8h.html">label_view.h</a>&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;allegro5/allegro.h&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="field__view_8h.html#aec9655085e48e4fda789531146e9f1d0">   14</a></span>&#160;<span class="preprocessor">#define FIELD_BORDER_SIZE 10 </span></div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="field__view_8h.html#ac8b40aa2e97ca893d0e2b289bcb47b71">   15</a></span>&#160;<span class="preprocessor">#define FIELD_HEGIHT_FINISH 70 </span></div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="field__view_8h.html#acd7c051921458cc9c3a5ee750df2b0c3">   16</a></span>&#160;<span class="preprocessor">#define FIELD_BORDER_COLOR al_map_rgb(0, 0, 0) </span></div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="field__view_8h.html#a8a09f9e515afb676c783bb01e3a058f4">   17</a></span>&#160;<span class="preprocessor">#define FIELD_BACKGROUND_COLOR al_map_rgb(255, 255, 255) </span></div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="field__view_8h.html#ac7574d320ad8df89f500dedecb681b41">   18</a></span>&#160;<span class="preprocessor">#define FIELD_FINISH_COLOR al_map_rgb(255, 99, 71) </span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"></span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structfield__view.html">   23</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structfield__view.html">field_view</a> {</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structfield__view.html#ab53c9a1f28f08baf51ad715a0959d7bd">   24</a></span>&#160;    ALLEGRO_BITMAP* <a class="code" href="structfield__view.html#ab53c9a1f28f08baf51ad715a0959d7bd">r_backgroud</a>; </div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structfield__view.html#a55858cc4e1caeeea539ff16ddd1baa79">   25</a></span>&#160;    ALLEGRO_BITMAP* <a class="code" href="structfield__view.html#a55858cc4e1caeeea539ff16ddd1baa79">r_border</a>; </div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structfield__view.html#ab3016ab1d95a4391f499cb754981d783">   26</a></span>&#160;    <a class="code" href="structplayer__view.html">player_view</a>* <a class="code" href="structfield__view.html#ab3016ab1d95a4391f499cb754981d783">p_view</a>;  </div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structfield__view.html#ab27a2b7d362ab502ba9430d59236f5ef">   27</a></span>&#160;    <a class="code" href="structlabel__view.html">label_view</a>* <a class="code" href="structfield__view.html#ab27a2b7d362ab502ba9430d59236f5ef">l_finish</a>; </div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="field__view_8h.html#ae82b096186d36dc129037b5d35937f88">   30</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structfield__view.html">field_view</a> <a class="code" href="structfield__view.html">field_view</a>;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<a class="code" href="structfield__view.html">field_view</a>* <a class="code" href="field__view_8h.html#a21ada3aca6c3fffd7ebc7b12776cf443">field_view_create</a>(<a class="code" href="structplayer__model.html">player_model</a>* p_model, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> width, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> height);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">int</span> <a class="code" href="field__view_8h.html#a44aa3af68e8a6b237018bfe7cfb70c33">field_view_draw</a>(<a class="code" href="structfield__view.html">field_view</a>* f_view);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">int</span> <a class="code" href="field__view_8h.html#a3b5569e6513c7010fd537ea62876309f">field_view_destroy</a>(<a class="code" href="structfield__view.html">field_view</a>* f_view);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif // FIELD_VIEW_H</span></div><div class="ttc" id="player__model_8h_html"><div class="ttname"><a href="player__model_8h.html">player_model.h</a></div><div class="ttdoc">Файл, в котором опеределены функции для работы с моделью игрока. </div></div>
+<div class="ttc" id="field__view_8h_html_a3b5569e6513c7010fd537ea62876309f"><div class="ttname"><a href="field__view_8h.html#a3b5569e6513c7010fd537ea62876309f">field_view_destroy</a></div><div class="ttdeci">int field_view_destroy(field_view *f_view)</div><div class="ttdef"><b>Definition:</b> field_view.c:147</div></div>
+<div class="ttc" id="structfield__view_html"><div class="ttname"><a href="structfield__view.html">field_view</a></div><div class="ttdoc">Структура, которая описывает отображение игрового поля. </div><div class="ttdef"><b>Definition:</b> field_view.h:23</div></div>
+<div class="ttc" id="structlabel__view_html"><div class="ttname"><a href="structlabel__view.html">label_view</a></div><div class="ttdoc">Структура, которая описывает элемент интерфейса: &quot;надпись&quot;. </div><div class="ttdef"><b>Definition:</b> label_view.h:15</div></div>
+<div class="ttc" id="player__view_8h_html"><div class="ttname"><a href="player__view_8h.html">player_view.h</a></div><div class="ttdoc">Файл, в котором опеределены функции для работы с отображением игрока. </div></div>
+<div class="ttc" id="structfield__view_html_ab53c9a1f28f08baf51ad715a0959d7bd"><div class="ttname"><a href="structfield__view.html#ab53c9a1f28f08baf51ad715a0959d7bd">field_view::r_backgroud</a></div><div class="ttdeci">ALLEGRO_BITMAP * r_backgroud</div><div class="ttdoc">Адрес прямоугольника фона. </div><div class="ttdef"><b>Definition:</b> field_view.h:24</div></div>
+<div class="ttc" id="label__view_8h_html"><div class="ttname"><a href="label__view_8h.html">label_view.h</a></div><div class="ttdoc">Файл, в котором опеределены функции для работы с элементом интерфейса: &quot;надпись&quot;. ...</div></div>
+<div class="ttc" id="structplayer__model_html"><div class="ttname"><a href="structplayer__model.html">player_model</a></div><div class="ttdoc">Структура, которая описывает модель игрока. </div><div class="ttdef"><b>Definition:</b> player_model.h:14</div></div>
+<div class="ttc" id="field__view_8h_html_a44aa3af68e8a6b237018bfe7cfb70c33"><div class="ttname"><a href="field__view_8h.html#a44aa3af68e8a6b237018bfe7cfb70c33">field_view_draw</a></div><div class="ttdeci">int field_view_draw(field_view *f_view)</div><div class="ttdef"><b>Definition:</b> field_view.c:112</div></div>
+<div class="ttc" id="structfield__view_html_a55858cc4e1caeeea539ff16ddd1baa79"><div class="ttname"><a href="structfield__view.html#a55858cc4e1caeeea539ff16ddd1baa79">field_view::r_border</a></div><div class="ttdeci">ALLEGRO_BITMAP * r_border</div><div class="ttdoc">Адрес прямоугольника рамки. </div><div class="ttdef"><b>Definition:</b> field_view.h:25</div></div>
+<div class="ttc" id="structplayer__view_html"><div class="ttname"><a href="structplayer__view.html">player_view</a></div><div class="ttdoc">Структура, которая описывает отображение игрока. </div><div class="ttdef"><b>Definition:</b> player_view.h:18</div></div>
+<div class="ttc" id="structfield__view_html_ab3016ab1d95a4391f499cb754981d783"><div class="ttname"><a href="structfield__view.html#ab3016ab1d95a4391f499cb754981d783">field_view::p_view</a></div><div class="ttdeci">player_view * p_view</div><div class="ttdoc">Адрес отображения игрока. </div><div class="ttdef"><b>Definition:</b> field_view.h:26</div></div>
+<div class="ttc" id="structfield__view_html_ab27a2b7d362ab502ba9430d59236f5ef"><div class="ttname"><a href="structfield__view.html#ab27a2b7d362ab502ba9430d59236f5ef">field_view::l_finish</a></div><div class="ttdeci">label_view * l_finish</div><div class="ttdoc">Адрес надпси &quot;Finish&quot;. </div><div class="ttdef"><b>Definition:</b> field_view.h:27</div></div>
+<div class="ttc" id="field__view_8h_html_a21ada3aca6c3fffd7ebc7b12776cf443"><div class="ttname"><a href="field__view_8h.html#a21ada3aca6c3fffd7ebc7b12776cf443">field_view_create</a></div><div class="ttdeci">field_view * field_view_create(player_model *p_model, unsigned int width, unsigned int height)</div><div class="ttdef"><b>Definition:</b> field_view.c:41</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="field__view_8h.html">field_view.h</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<map id="src/error_report.h" name="src/error_report.h">
+<area shape="rect" id="node2" href="$error__report_8c.html" title="Файл, в котором реализованы функции логирования ошибок. " alt="" coords="5,80,139,107"/>
+<area shape="rect" id="node3" href="$field__view_8c.html" title="Файл, в котором реализованы функции для работы с отображением игрового поля. " alt="" coords="163,80,285,107"/>
+<area shape="rect" id="node4" href="$game__model_8c.html" title="src/game_model.c" alt="" coords="309,80,451,107"/>
+<area shape="rect" id="node5" href="$game__view_8c.html" title="Файл, в котором опеределены функции для работы с отображением игры. " alt="" coords="475,80,605,107"/>
+<area shape="rect" id="node6" href="$label__view_8c.html" title="Файл, в котором реализованы функции для работы с элементом интерфейса: &quot;надпись&quot;. ..." alt="" coords="630,80,757,107"/>
+<area shape="rect" id="node7" href="$main_8c.html" title="Файл, в котором создается и запускается игра. " alt="" coords="781,80,870,107"/>
+<area shape="rect" id="node8" href="$player__model_8c.html" title="Файл, в котором реализованы функции для работы с моделью игрока. " alt="" coords="894,80,1039,107"/>
+<area shape="rect" id="node9" href="$player__view_8c.html" title="src/player_view.c" alt="" coords="1063,80,1198,107"/>
+<area shape="rect" id="node10" href="$rectangle__view_8c.html" title="Файл, в котором реализованы функции для работы с элементом интерфейса: &quot;прямоугольник&quot;. " alt="" coords="1223,80,1377,107"/>
+<area shape="rect" id="node11" href="$timer__model_8c.html" title="src/timer_model.c" alt="" coords="1401,80,1540,107"/>
+<area shape="rect" id="node12" href="$timer__view_8c.html" title="Файл, в котором реализованы функции для работы с отображением таймеров. " alt="" coords="1565,80,1694,107"/>
+</map>
