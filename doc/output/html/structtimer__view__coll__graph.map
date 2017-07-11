@@ -1,4 +1,0 @@
-<map id="timer_view" name="timer_view">
-<area shape="rect" id="node2" href="$structtimer__model.html" title="Структура, которая описывает модель таймеров. " alt="" coords="5,5,111,32"/>
-<area shape="rect" id="node3" href="$structlabel__view.html" title="Структура, которая описывает элемент интерфейса: &quot;надпись&quot;. " alt="" coords="135,5,227,32"/>
-</map>

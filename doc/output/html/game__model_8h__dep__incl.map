@@ -1,7 +1,0 @@
-<map id="src/game_model.h" name="src/game_model.h">
-<area shape="rect" id="node2" href="$game__model_8c.html" title="src/game_model.c" alt="" coords="5,80,147,107"/>
-<area shape="rect" id="node3" href="$game__view_8h.html" title="Файл, в котором опеределены функции для работы с отображением игры. " alt="" coords="171,80,303,107"/>
-<area shape="rect" id="node6" href="$test___game_model_8c.html" title="Файл тестирующий игровую модель. " alt="" coords="327,80,523,107"/>
-<area shape="rect" id="node4" href="$game__view_8c.html" title="Файл, в котором опеределены функции для работы с отображением игры. " alt="" coords="104,155,235,181"/>
-<area shape="rect" id="node5" href="$main_8c.html" title="Файл, в котором создается и запускается игра. " alt="" coords="259,155,349,181"/>
-</map>

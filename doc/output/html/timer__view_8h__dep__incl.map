@@ -1,6 +1,0 @@
-<map id="src/timer_view.h" name="src/timer_view.h">
-<area shape="rect" id="node2" href="$game__view_8h.html" title="Файл, в котором опеределены функции для работы с отображением игры. " alt="" coords="71,80,203,107"/>
-<area shape="rect" id="node5" href="$timer__view_8c.html" title="Файл, в котором реализованы функции для работы с отображением таймеров. " alt="" coords="227,80,357,107"/>
-<area shape="rect" id="node3" href="$game__view_8c.html" title="Файл, в котором опеределены функции для работы с отображением игры. " alt="" coords="5,155,136,181"/>
-<area shape="rect" id="node4" href="$main_8c.html" title="Файл, в котором создается и запускается игра. " alt="" coords="161,155,250,181"/>
-</map>
