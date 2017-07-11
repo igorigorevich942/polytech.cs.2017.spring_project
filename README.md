@@ -1,32 +1,66 @@
-# polytech.cs.2017.spring_project
-Template for Course Project
+# Игра "Забег"
+Программа - это реализация игры "Забег".
 
-\\test.Igor
-## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+## Информация
+Проект написан на языке C с использование библиотеки allegro. 
+Unit-тесты были написаны с истользованием фреймворка Unity.
 
-### Directory structure
-The source code is organized as follows:
+### Скриншот 
+![Image alt](http://savepic.ru/14589529.png)
 
-Subdirectory | Description
--------------|-------------------
-src/         | source files 
-src/tests    | unit tests 
-doc/         | documentation 
-res/         | static resources
+### Правила игры
+Ваша задача - как можно быстрее пересечь финишную черту.
 
-### Build
-To build the project, do the following:
+### Управление
+Для старта игры небходимо нажать клавишу "Enter".
+
+После старта игры для увеличения скорости игрока нужно нажимать клавиши "стрелка влево" и "стрелка вправо", чем чаще нажимать, тем выше скорость.
+
+
+После финиширования для выхода из игры небоходимо нажать кливишу "Enter".
+
+
+### Структура директории
+Файлы в директории лежат следующим образом:
+
+  Каталог    |   Описание
+-------------|--------------------------
+src/         | файлы исходного кода 
+src/res      | ресурсы игры
+src/test     | unit-тесты
+doc/         | документация
+doc/res/     | ресурсы для документации
+
+### Сборка
+Для того, чтобы собрать проект напишите следующее:
 ````
 make
 ````
-To rebuild everything from scratch, do the following:
+Чтобы восстановить все с нуля, выполните следующее действие:
 ````
 make clean
 ````
+Для запуска тестов необходимо ввести следующую команду:
+````
+make D_UNITY=../Unity check
+````
+Для сборки документации:
+````
+make doxygen
+````
+Для сборки документации в формате PDF:
+````
+make pdf
+````
+Для сборки документации в формате HTML:
+````
+make html
+````
 
-## Authors
-* **Name Surname** - xxx@spbstu.ru
+## Авторы
+* **Рябота Игорь Игоревич** - igorigorevich942@rambler.ru
+* **Мысь Дмитрий Александрович** - dima.mys@mail.ru
 
-## License
+
+## Лицензия
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details

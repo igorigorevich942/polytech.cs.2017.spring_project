@@ -1,21 +1,49 @@
-/** @file main.c
- *  @brief Main program file
- *
- *  This is an example. Please, change the description.
- *
- *  @author Name Surname - xxx@spbstu.ru
- */
+/** \file main.c
+\brief Файл, в котором создается и запускается игра.
 
-#include <stdio.h>
+\def FUN_NAME 
+\brief Имя текущей функции.
+*/
 
-/** @brief Program entrypoint.
- *
- *  This is the entrypoint for the program.
- *
- * @return int
- */
-int main (void)
+#include "game_view.h"
+#include "error_report.h"
+
+#include <allegro5/allegro.h>
+
+#define FILE_NAME "main.c" ///< Текущие имя файла.
+
+/**
+Точка входа в программу.
+\return Ноль, если программа успешно завершилась. \n
+        Ненулевое число, если в ходе выполнения программы возникла ошибка.
+*/
+int main()
 {
-    printf ("Hello, world!\n");
+    #define FUN_NAME "main"
+
+    if(!al_init()) {
+        error_report(FILE_NAME, FUN_NAME, "failed to initialize allegro!");
+        return -1;
+    }
+
+    if(!al_install_keyboard()) {
+        error_report(FILE_NAME, FUN_NAME, "failed to initialize the keyboard!");
+        return -1;
+    }
+
+    game_view* g_view = game_view_create();
+
+    if (g_view == NULL) {
+        error_report(FILE_NAME, FUN_NAME, "failed to create game view!");
+        return -1;
+    }
+
+    game_view_start(g_view);
+    game_view_destroy(g_view);
+
     return 0;
+
+    #undef FUN_NAME
 }
+
+#undef FILE_NAME
